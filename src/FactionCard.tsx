@@ -1,4 +1,4 @@
-import { Card, Text } from '@mantine/core';
+import { Card, Center, Text } from '@mantine/core';
 
 export default function FactionCard(props: { name: string }) {
   return (
@@ -12,7 +12,9 @@ export default function FactionCard(props: { name: string }) {
       </Card.Section> */}
 
       {/* <Group position="apart" mt="md" mb="xs"> */}
+      <Center>
         <Text weight={500}>{props.name}</Text>
+      </Center>
       {/* </Group> */}
 
       {/* <Text size="sm" color="dimmed">

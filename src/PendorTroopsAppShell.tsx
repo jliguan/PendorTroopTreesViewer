@@ -8,7 +8,8 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
-  ScrollArea
+  ScrollArea,
+  Anchor
 } from '@mantine/core';
 import AccordionCategories from './AccordionCategories';
 import PendorNavbar from './PendorNavbar';
@@ -35,7 +36,6 @@ export default function PendorTroopsAppShell() {
         asideOffsetBreakpoint="sm"
         navbar={
           <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 200 }}>
-            {/* <Text>Application navbar</Text> */}
             <PendorNavbar />
           </Navbar>
         }
@@ -64,24 +64,22 @@ export default function PendorTroopsAppShell() {
                 />
               </MediaQuery>
 
-              <Text>Pendor Troops</Text>
+              <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} >Pendor Troops</Anchor>
             </div>
           </Header>
         }
       >
-        <ScrollArea style={{ height: 880 }} type="hover" offsetScrollbars>
+        <ScrollArea style={{ height: '91vh' }} type="never">
           <Routes>
             <Route path="/" element={<AccordionCategories />} />
             <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
           </Routes>
         </ScrollArea>
-        {/* <Text>
-        <AccordionCategories />
-      </Text> */}
-        {/* <AccordionCategories /> */}
-
-        {/* TODO: Implement ScrollArea to Shell Body; remove overflow and native scroll */}
       </AppShell>
     </Router>
   );
+}
+
+function createStyles(arg0: (theme: any) => { root: { borderLeft: string; }; }) {
+  throw new Error('Function not implemented.');
 }

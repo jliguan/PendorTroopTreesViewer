@@ -1,34 +1,26 @@
-import { Grid, Anchor } from '@mantine/core';
-import FactionCard from './FactionCard';
+import { Grid, Button } from '@mantine/core';
 import { Link } from 'react-router-dom';
 
+const MajorData = [
+    { name: "Sarleon", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Ravenstern", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Fierdsvain", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Empire", linkTo: "/MajorTrees/Sarleon" },
+    { name: "D'Shar", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Pendor", linkTo: "/MajorTrees/Sarleon" }
+];
+
 export default function MajorGrid() {
+
+    const MajorItems = MajorData.map((item) => (
+        <Grid.Col md={4} key={item.name}>
+            <Button fullWidth component={Link} to={item.linkTo} size="md" variant="light">
+                {item.name}
+            </Button>
+        </Grid.Col>
+    ));
+
     return (
-        <Grid>
-            <Grid.Col md={4}>
-
-                <Anchor component={Link} variant="link" to="/MajorTrees/Sarleon">
-                    <FactionCard name="Sarleon" />
-                </Anchor>
-
-                
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Ravenstern" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Fierdsvain" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Empire" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="D'Shar" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Pendor" />
-            </Grid.Col>
-
-        </Grid>
+        <Grid> {MajorItems} </Grid>
     );
 }

@@ -1,67 +1,39 @@
-import { Grid } from '@mantine/core';
-import FactionCard from './FactionCard';
+import { Button, Grid } from '@mantine/core';
+import { Link } from 'react-router-dom';
+
+const KOData = [
+    { name: "Order of the Lion", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Dragon", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Lady Valkyries Sisterhood", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Shadow Legion", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Empire Immortals", linkTo: "/MajorTrees/Sarleon" },
+    { name: "D'Shar Windriders", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Griffon", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Falcon", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Raven Spear", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Radiant Cross", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Clarion Call", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Ebony Gauntlet", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Silvermist Rangers", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Dawn", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of Eventide", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Phoenix", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Shadow Wolves", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Scorpion Assassins", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Order of the Kraken Cultists", linkTo: "/MajorTrees/Sarleon" }
+];
 
 export default function KOGrid() {
-    return (
-        <Grid>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Lion" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Dragon" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Lady Valkyries Sisterhood" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Lady Valkyries Sisterhood" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Empire Immortals" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="D'Shar Windriders" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Griffon" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Falcon" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Falcon" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Radiant Cross" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Clarion Call" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Ebony Gauntlet" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Silvermist Rangers" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Dawn" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of Eventide" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Phoenix" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Shadow Wolves" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Shadow Wolves" />
-            </Grid.Col>
-            <Grid.Col md={4}>
-                <FactionCard name="Order of the Kraken Cultists" />
-            </Grid.Col>
+    
+    const KOItems = KOData.map((item) => (
+        <Grid.Col md={3} key={item.name}>
+            <Button fullWidth component={Link} to={item.linkTo} size="md" variant="light">
+                {item.name}
+            </Button>
+        </Grid.Col>
+    ));
 
-        </Grid>
+    return (
+        <Grid> {KOItems} </Grid>
     );
 }

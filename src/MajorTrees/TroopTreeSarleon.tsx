@@ -1,19 +1,33 @@
-import { Text, Paper, Center, Card, Image, Group } from '@mantine/core';
+import { Text, Paper, Center, Card, Image, Group, BackgroundImage, Box } from '@mantine/core';
 
 
 export default function TroopTreeSarleon() {
     return (
-        <Paper shadow="xs" p="sm" withBorder>
-            <Center>
 
+        <Paper shadow="xs" p="sm" withBorder>
+            <Box sx={{ maxWidth: 300 }} mx="auto">
+                <BackgroundImage
+                    src="/assets/coat_sarleon.png"
+                    radius="sm"
+                >
+                    <Center p="md">
+                        <Text 
+                            variant="gradient"
+                            gradient={{ from: 'yellow', to: 'darkred', deg: 45 }}
+                            size="xl"
+                            weight={700}
+                        >
+                            Sarleon
+                        </Text>
+                    </Center>
+                </BackgroundImage>
+            </Box>
+            <Center>
                 <Card shadow="sm" p="lg" radius="md" withBorder>
                     <Card.Section>
-
                         <Center>
-
-
                             <Image
-                                src="/src/assets/SarleonPNG/Sarleon_Recruit.png"
+                                src="/assets/SarleonPNG/Sarleon_Recruit.png"
                                 height={200}
                                 width={100}
                                 alt="Sarleon Recruit"
@@ -33,5 +47,6 @@ export default function TroopTreeSarleon() {
 
             </Center>
         </Paper>
+
     );
 }

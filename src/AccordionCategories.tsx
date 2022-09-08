@@ -1,13 +1,21 @@
-import { Accordion } from '@mantine/core';
+import { Accordion, createStyles } from '@mantine/core';
 import KOGrid from './KOGrid';
 import MajorGrid from './MajorGrid';
 import MinorGrid from './MinorGrid';
 
+const useStyles = createStyles(() => ({
+    label: {
+        fontWeight: 600,
+        padding: 5
+    }
+}));
+
 export default function AccordionCategories() {
 
-    return (
+    const { classes } = useStyles();
 
-        <Accordion chevronSize={40} variant="separated" chevronPosition="left" multiple={true} defaultValue={["MajorFactions", "MinorFactions", "KOFactions"]}>
+    return (
+        <Accordion chevronSize={50} variant="separated" chevronPosition="left" multiple={true} classNames={classes} >
             <Accordion.Item value="MajorFactions">
                 <Accordion.Control>Major Factions</Accordion.Control>
                 <Accordion.Panel>
@@ -29,5 +37,7 @@ export default function AccordionCategories() {
                 </Accordion.Panel>
             </Accordion.Item>
         </Accordion>
+
+        
     );
 }
