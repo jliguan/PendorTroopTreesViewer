@@ -117,7 +117,7 @@ export default function PendorTroopsAppShell() {
         <ScrollArea style={{ height: '91vh' }} type="never">
           <Routes>
             <Route path="/" element={<AccordionCategories />} />
-            <Route path="Minor Factions" element={<TroopTreeSarleon />} />
+            <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
           </Routes>
         </ScrollArea>
       </AppShell>
