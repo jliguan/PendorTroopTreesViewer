@@ -128,7 +128,7 @@ export default function PendorTroopsAppShell() {
         }
       >
         {/* <ScrollArea style={{ height: '87vh' }} type="never"> */}
-        <ScrollArea.Autosize maxHeight={'100%'} type="never">
+        <ScrollArea.Autosize maxHeight={'87vh'} type="never">
           <Routes>
             <Route path="/" element={<AccordionCategories />} />
             <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
