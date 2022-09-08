@@ -40,6 +40,7 @@ export default function PendorTroopsAppShell() {
           <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 200 }}>
             <PendorNavbar />
           </Navbar>
+
         }
         aside={
           <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
@@ -48,16 +49,11 @@ export default function PendorTroopsAppShell() {
             </Aside>
           </MediaQuery>
         }
-        // footer={
-        //   <Footer height={60} p="md">
-        //     Application footer
-        //   </Footer>
-        // }
         header={
           <Header height={70} p="md">
 
             <Grid style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-              <Grid.Col span={6} style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+              <Grid.Col span={7} style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
 
                 <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
                   <Burger
@@ -65,18 +61,15 @@ export default function PendorTroopsAppShell() {
                     onClick={() => setOpened((o) => !o)}
                     size="sm"
                     color={theme.colors.gray[6]}
-                    mr="xl"
+                    mr="lg"
                   />
                 </MediaQuery>
 
-                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="lg" inline>Pendor Troops</Anchor>
+                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline>Pendor Troops</Anchor>
 
               </Grid.Col>
 
-
-              <Grid.Col span={3} offset={3}>
-
-
+              <Grid.Col span={5}>
                 <Autocomplete
                   placeholder="Search"
                   data={[
@@ -103,7 +96,27 @@ export default function PendorTroopsAppShell() {
                     { value: "Melitine Empire", group: "Minor Factions" },
                     { value: "Mercenaries", group: "Minor Factions" },
                     { value: "Rebel Peasants", group: "Minor Factions" },
-                    { value: "Inquisition", group: "Minor Factions" }
+                    { value: "Inquisition", group: "Minor Factions" },
+
+                    { value: "Order of the Lion", group: "Knighthood Orders" },
+                    { value: "Order of the Dragon", group: "Knighthood Orders" },
+                    { value: "Lady Valkyries Sisterhood", group: "Knighthood Orders" },
+                    { value: "Order of the Shadow Legion", group: "Knighthood Orders" },
+                    { value: "Empire Immortals", group: "Knighthood Orders" },
+                    { value: "D'Shar Windriders", group: "Knighthood Orders" },
+                    { value: "Order of the Griffon", group: "Knighthood Orders" },
+                    { value: "Order of the Falcon", group: "Knighthood Orders" },
+                    { value: "Order of the Raven Spear", group: "Knighthood Orders" },
+                    { value: "Order of the Radiant Cross", group: "Knighthood Orders" },
+                    { value: "Order of the Clarion Call", group: "Knighthood Orders" },
+                    { value: "Order of the Ebony Gauntlet", group: "Knighthood Orders" },
+                    { value: "Order of the Silvermist Rangers", group: "Knighthood Orders" },
+                    { value: "Order of the Dawn", group: "Knighthood Orders" },
+                    { value: "Order of Eventide", group: "Knighthood Orders" },
+                    { value: "Order of the Phoenix", group: "Knighthood Orders" },
+                    { value: "Order of the Shadow Wolves", group: "Knighthood Orders" },
+                    { value: "Order of the Scorpion Assassins", group: "Knighthood Orders" },
+                    { value: "Order of the Kraken Cultists", group: "Knighthood Orders" }
                   ]}
                   size="sm"
                   zIndex={101}
@@ -114,12 +127,14 @@ export default function PendorTroopsAppShell() {
           </Header>
         }
       >
-        <ScrollArea style={{ height: '91vh' }} type="never">
+        {/* <ScrollArea style={{ height: '87vh' }} type="never"> */}
+        <ScrollArea.Autosize maxHeight={'100%'} type="never">
           <Routes>
             <Route path="/" element={<AccordionCategories />} />
             <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
           </Routes>
-        </ScrollArea>
+        {/* </ScrollArea> */}
+        </ScrollArea.Autosize>
       </AppShell>
     </Router>
   );
