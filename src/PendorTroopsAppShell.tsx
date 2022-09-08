@@ -11,7 +11,8 @@ import {
   ScrollArea,
   Anchor,
   Autocomplete,
-  Grid
+  Grid,
+  Container
 } from '@mantine/core';
 import AccordionCategories from './AccordionCategories';
 import PendorNavbar from './PendorNavbar';
@@ -128,13 +129,17 @@ export default function PendorTroopsAppShell() {
         }
       >
         {/* <ScrollArea style={{ height: '87vh' }} type="never"> */}
-        <ScrollArea.Autosize maxHeight={'87vh'} type="never">
-          <Routes>
-            <Route path="/" element={<AccordionCategories />} />
-            <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
-          </Routes>
-        {/* </ScrollArea> */}
-        </ScrollArea.Autosize>
+        {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
+        <Container px={0} sx={{height: 'calc(100vh - var(--mantine-header-height))'}}>
+          <ScrollArea style={{ height: '95%'}} type="never">
+            <Routes>
+              <Route path="/" element={<AccordionCategories />} />
+              <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
+            </Routes>
+          </ScrollArea>
+        </Container>
+
+        {/* </ScrollArea.Autosize> */}
       </AppShell>
     </Router>
   );
