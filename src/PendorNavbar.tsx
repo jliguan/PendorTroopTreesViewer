@@ -13,7 +13,7 @@ export default function PendorNavbar() {
   const { classes } = useStyles();
 
   return (
-    <ScrollArea offsetScrollbars>
+    <ScrollArea offsetScrollbars type="never">
       <NavLink
         label="Major Factions"
         childrenOffset={28}
