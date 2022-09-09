@@ -130,7 +130,7 @@ export default function PendorTroopsAppShell() {
       >
         {/* <ScrollArea style={{ height: '87vh' }} type="never"> */}
         {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
-        <Container px={0} sx={{height: 'calc(100vh - var(--mantine-header-height))'}}>
+        <Container px={0} mx={0} fluid sx={{height: 'calc(100vh - var(--mantine-header-height))'}}>
           <ScrollArea style={{ height: '95%'}} type="never">
             <Routes>
               <Route path="/" element={<AccordionCategories />} />
