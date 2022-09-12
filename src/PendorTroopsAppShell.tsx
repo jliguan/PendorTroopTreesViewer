@@ -27,6 +27,7 @@ import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
+  
   return (
     <Router>
       <AppShell
@@ -122,6 +123,7 @@ export default function PendorTroopsAppShell() {
                   size="sm"
                   zIndex={101}
                   limit={6}
+                  onItemSubmit={(item) => console.log(item.value)}
                 />
               </Grid.Col>
             </Grid>
@@ -130,6 +132,7 @@ export default function PendorTroopsAppShell() {
       >
         {/* <ScrollArea style={{ height: '87vh' }} type="never"> */}
         {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
+
         <Container px={0} mx={0} fluid sx={{height: 'calc(100vh - var(--mantine-header-height))'}}>
           <ScrollArea style={{ height: '95%'}} type="never">
             <Routes>

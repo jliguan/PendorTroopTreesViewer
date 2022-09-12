@@ -17,13 +17,12 @@ export default function PendorNavbar() {
       <NavLink
         label="Major Factions"
         childrenOffset={28}
-        // defaultOpened
-        defaultOpened={location.pathname === '/MajorTrees/Sarleon'}
+        opened={location.pathname.includes("MajorTrees")}
       >
         <NavLink label="Sarleon" component={Link} to="/MajorTrees/Sarleon" active={location.pathname === '/MajorTrees/Sarleon'} classNames={classes} />
         <NavLink label="Ravenstern" classNames={classes} />
         <NavLink label="Fierdsvain" classNames={classes} />
-        <NavLink label="Empire"  classNames={classes} />
+        <NavLink label="Empire" classNames={classes} />
         <NavLink label="D'Shar" classNames={classes} />
         <NavLink label="Pendor" classNames={classes} />
       </NavLink>
@@ -31,7 +30,7 @@ export default function PendorNavbar() {
       <NavLink
         label="Minor Factions"
         childrenOffset={28}
-      // defaultOpened
+        opened={location.pathname.includes("MinorTrees")}
       >
         <NavLink label="Heretics" classNames={classes} />
         <NavLink label="Jatu" classNames={classes} />
@@ -55,7 +54,7 @@ export default function PendorNavbar() {
       <NavLink
         label="Knighthood Orders"
         childrenOffset={28}
-      // defaultOpened
+        opened={location.pathname.includes("KOTrees")}
       >
         <NavLink label="Order of the Lion" classNames={classes} />
         <NavLink label="Order of the Dragon" classNames={classes} />
