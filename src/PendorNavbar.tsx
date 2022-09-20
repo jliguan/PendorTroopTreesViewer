@@ -11,13 +11,12 @@ export default function PendorNavbar() {
 
   const location = useLocation();
   const { classes } = useStyles();
-
+  
   return (
     <ScrollArea offsetScrollbars type="never">
       <NavLink
         label="Major Factions"
         childrenOffset={28}
-        opened={location.pathname.includes("MajorTrees")}
       >
         <NavLink label="Sarleon" component={Link} to="/MajorTrees/Sarleon" active={location.pathname === '/MajorTrees/Sarleon'} classNames={classes} />
         <NavLink label="Ravenstern" classNames={classes} />
@@ -30,7 +29,7 @@ export default function PendorNavbar() {
       <NavLink
         label="Minor Factions"
         childrenOffset={28}
-        opened={location.pathname.includes("MinorTrees")}
+        // opened={location.pathname.includes("MinorTrees")}
       >
         <NavLink label="Heretics" classNames={classes} />
         <NavLink label="Jatu" classNames={classes} />
@@ -54,7 +53,7 @@ export default function PendorNavbar() {
       <NavLink
         label="Knighthood Orders"
         childrenOffset={28}
-        opened={location.pathname.includes("KOTrees")}
+        // opened={location.pathname.includes("KOTrees")}
       >
         <NavLink label="Order of the Lion" classNames={classes} />
         <NavLink label="Order of the Dragon" classNames={classes} />

@@ -29,16 +29,16 @@ export default function TroopTreeSarleon() {
                     <Card.Section>
                         <Center>
                             <Image
-                                src="/assets/SarleonPNG/Sarleon_Recruit.png"
-                                height={200}
-                                width={100}
-                                alt="Sarleon Recruit"
+                                src="/assets/SarleonPNG/Sarleon_Man_at_Arms.png"
+                                height={150}
+                                width={70}
+                                alt="Sarleon Man-at-Arms"
                             />
                         </Center>
                     </Card.Section>
 
                     <Group position="apart">
-                        <Text weight={500}>Sarleon Recruit</Text>
+                        <Text weight={500}>Sarleon Man-at-Arms</Text>
                     </Group>
 
                     {/* <Text size="sm" color="dimmed">

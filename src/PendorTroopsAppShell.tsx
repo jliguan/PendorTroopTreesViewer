@@ -27,6 +27,7 @@ import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
+
   
   return (
     <Router>
@@ -67,7 +68,7 @@ export default function PendorTroopsAppShell() {
                   />
                 </MediaQuery>
 
-                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline>Pendor Troops</Anchor>
+                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline>Pendor Troop Tree Viewer</Anchor>
 
               </Grid.Col>
 
