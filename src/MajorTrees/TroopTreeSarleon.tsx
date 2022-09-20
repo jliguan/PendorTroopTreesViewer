@@ -1,29 +1,14 @@
-import { Text, Paper, Center, Card, Image, Group, Box } from '@mantine/core';
+import { Text, Center, Card, Image, Group, Container } from '@mantine/core';
 
 export default function TroopTreeSarleon() {
 
     return (
-
-
-        <Paper shadow="xs" p="sm" withBorder>
-            <Box sx={{ maxWidth: 300 }} mx="auto">
-                {/* <BackgroundImage
-                    src="/assets/coat_sarleon.png"
-                    radius="sm"
-                > */}
-                    <Center p="md">
-                        {/* <Text
-                                variant="gradient"
-                                gradient={{ from: 'yellow', to: 'darkred', deg: 45 }}
-                                size="xl"
-                                weight={700}
-                            > */}
-                            <Text color={'darkred'} size='xl'>
-                                Sarleon
-                            </Text>
-                    </Center>
-                {/* </BackgroundImage> */}
-            </Box>
+            <Container p={0}>
+                    {/* <Text color={'darkred'} size='xl'>
+                        Sarleon
+                    </Text> */}
+                    
+                    {/* <Anchor component={Link} to="/"> Major Factions </Anchor> */}
             <Center>
                 <Card shadow="sm" p="lg" radius="md" withBorder>
                     <Card.Section>
@@ -36,19 +21,12 @@ export default function TroopTreeSarleon() {
                             />
                         </Center>
                     </Card.Section>
-
                     <Group position="apart">
                         <Text weight={500}>Sarleon Man-at-Arms</Text>
                     </Group>
-
-                    {/* <Text size="sm" color="dimmed">
-                        With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-                        activities on and around the fjords of Norway
-                    </Text> */}
                 </Card>
-
             </Center>
-        </Paper>
+        </Container>
 
     );
 }

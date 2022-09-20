@@ -3,8 +3,6 @@ import {
   AppShell,
   Navbar,
   Header,
-  Aside,
-  Text,
   MediaQuery,
   Burger,
   useMantineTheme,
@@ -20,7 +18,7 @@ import {
   BrowserRouter as Router,
   Link,
   Route,
-  Routes
+  Routes,
 } from "react-router-dom";
 import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
 
@@ -28,10 +26,12 @@ export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
 
-  
+
+
   return (
     <Router>
       <AppShell
+        padding="xs"
         styles={{
           main: {
             background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
@@ -45,13 +45,13 @@ export default function PendorTroopsAppShell() {
           </Navbar>
 
         }
-        aside={
-          <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-            <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
-              <Text>Application sidebar</Text>
-            </Aside>
-          </MediaQuery>
-        }
+        // aside={
+        //   <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+        //     <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
+        //       <Text>Application sidebar</Text>
+        //     </Aside>
+        //   </MediaQuery>
+        // }
         header={
           <Header height={70} p="md">
 
@@ -75,6 +75,7 @@ export default function PendorTroopsAppShell() {
               <Grid.Col span={5}>
                 <Autocomplete
                   placeholder="Search"
+                  disabled
                   data={[
                     { value: "Sarleon", group: "Major Factions" },
                     { value: "Ravenstern", group: "Major Factions" },
@@ -125,6 +126,13 @@ export default function PendorTroopsAppShell() {
                   zIndex={101}
                   limit={6}
                   onItemSubmit={(item) => console.log(item.value)}
+                // inputContainer={(children) => (
+
+
+                //   <Anchor component={Link} to="/Sarleon">
+                //   {children}
+                // </Anchor>
+                //   )}
                 />
               </Grid.Col>
             </Grid>
@@ -134,8 +142,8 @@ export default function PendorTroopsAppShell() {
         {/* <ScrollArea style={{ height: '87vh' }} type="never"> */}
         {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
 
-        <Container px={0} mx={0} fluid sx={{height: 'calc(100vh - var(--mantine-header-height))'}}>
-          <ScrollArea style={{ height: '95%'}} type="never">
+        <Container px={0} mx={0} fluid sx={{ height: 'calc(100vh - var(--mantine-header-height))' }}>
+          <ScrollArea style={{ height: '95%' }} type="never">
             <Routes>
               <Route path="/" element={<AccordionCategories />} />
               <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
