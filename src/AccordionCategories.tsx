@@ -1,4 +1,5 @@
 import { Accordion, createStyles } from '@mantine/core';
+import { useState } from 'react';
 import KOGrid from './KOGrid';
 import MajorGrid from './MajorGrid';
 import MinorGrid from './MinorGrid';
@@ -13,9 +14,10 @@ const useStyles = createStyles(() => ({
 export default function AccordionCategories() {
 
     const { classes } = useStyles();
+    const [value, setValue] = useState<string[]>(["MajorFactions"]);
 
     return (
-        <Accordion chevronSize={50} variant="separated" chevronPosition="left" multiple={true} classNames={classes} >
+        <Accordion chevronSize={50} variant="separated" chevronPosition="left" multiple={true} classNames={classes} value={value} onChange={setValue}>
             <Accordion.Item value="MajorFactions">
                 <Accordion.Control>Major Factions</Accordion.Control>
                 <Accordion.Panel>

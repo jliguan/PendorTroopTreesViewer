@@ -1,32 +1,96 @@
-import { Text, Center, Card, Image, Group, Container } from '@mantine/core';
+import { Grid, Indicator } from '@mantine/core';
+import FactionCard from '../FactionCard';
 
 export default function TroopTreeSarleon() {
 
     return (
-            <Container p={0}>
-                    {/* <Text color={'darkred'} size='xl'>
-                        Sarleon
-                    </Text> */}
-                    
-                    {/* <Anchor component={Link} to="/"> Major Factions </Anchor> */}
-            <Center>
-                <Card shadow="sm" p="lg" radius="md" withBorder>
-                    <Card.Section>
-                        <Center>
-                            <Image
-                                src="/assets/SarleonPNG/Sarleon_Man_at_Arms.png"
-                                height={150}
-                                width={70}
-                                alt="Sarleon Man-at-Arms"
-                            />
-                        </Center>
-                    </Card.Section>
-                    <Group position="apart">
-                        <Text weight={500}>Sarleon Man-at-Arms</Text>
-                    </Group>
-                </Card>
-            </Center>
-        </Container>
+        <Grid grow gutter="sm" justify="center" columns={24}>
 
+            <Grid.Col span={9}></Grid.Col>
+            <Grid.Col span={6} >
+                <Indicator position="bottom-center" radius="xs" size={12} color="dark.2">
+                    <FactionCard faction={'sarleon'} name={'recruit'}></FactionCard>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+
+            <Grid.Col span={9}></Grid.Col>
+            <Grid.Col span={6}>
+                <Indicator position="bottom-start" radius="xs" size={12} color="dark.2">
+                    <Indicator position="bottom-end" radius="xs" size={12} color="dark.2">
+                            <FactionCard faction={'sarleon'} name={'militia'}></FactionCard>
+                    </Indicator>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6}>
+                <Indicator position="bottom-center" radius="xs" size={12} color="dark.2">
+                        <FactionCard faction={'sarleon'} name={'trained_militia'}></FactionCard>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6}>
+                <Indicator position="bottom-center" radius="xs" size={12} color="dark.2">
+                        <FactionCard faction={'sarleon'} name={'skirmisher'}></FactionCard>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6}>
+                <Indicator position="bottom-center" radius="xs" size={12} color="dark.2">
+                        <FactionCard faction={'sarleon'} name={'footman'}></FactionCard>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6}>
+                <Indicator position="bottom-center" radius="xs" size={12} color="dark.2">
+                        <FactionCard faction={'sarleon'} name={'longbowman'}></FactionCard>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6}>
+                <Indicator position="bottom-start" radius="xs" size={12} color="dark.2">
+                    <Indicator position="bottom-end" radius="xs" size={12} color="dark.2">
+                            <FactionCard faction={'sarleon'} name={'armored_footman'}></FactionCard>
+                    </Indicator>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6}>
+                    <FactionCard faction={'sarleon'} name={'armored_longbowman'}></FactionCard>
+            </Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={6}>
+                <Indicator position="bottom-center" radius="xs" size={12} color="dark.2">
+                        <FactionCard faction={'sarleon'} name={'man_at_arms'}></FactionCard>
+                </Indicator>
+            </Grid.Col>
+            <Grid.Col span={6}>
+                    <FactionCard faction={'sarleon'} name={'cavalry'}></FactionCard>
+            </Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
+
+            <Grid.Col span={6}>
+                    <FactionCard faction={'sarleon'} name={'halberdier'}></FactionCard>
+            </Grid.Col>
+
+            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
+
+        </Grid>
     );
 }

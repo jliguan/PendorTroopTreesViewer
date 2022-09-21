@@ -68,7 +68,14 @@ export default function PendorTroopsAppShell() {
                   />
                 </MediaQuery>
 
-                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline>Pendor Troop Tree Viewer</Anchor>
+                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline p={5}
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: `${theme.colors.dark[6]}`,
+                    }
+                  }}>
+                  Pendor Troop Tree Viewer
+                </Anchor>
 
               </Grid.Col>
 
