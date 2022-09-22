@@ -1,4 +1,4 @@
-import { Center, createStyles, Grid, ThemeIcon, Title } from '@mantine/core';
+import { Center, createStyles, Divider, Grid, Space, ThemeIcon, Title } from '@mantine/core';
 import { IconArrowDown, IconArrowDownLeft, IconArrowDownRight } from '@tabler/icons';
 import FactionCard from '../FactionCard';
 
@@ -41,6 +41,12 @@ export default function TroopTreeSarleon() {
 
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
+
+            <Grid.Col span={24}>
+                <Title order={1} pl="lg">Sarleon</Title>
+                <Divider my="sm" />
+            </Grid.Col>
+
 
             <Grid.Col span={24}>
                 <Center sx={{ backgroundColor: '#8B0000' }}>
@@ -127,7 +133,7 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                    <FactionCard faction={'sarleon'} name={'man_at_arms'}></FactionCard>
+                <FactionCard faction={'sarleon'} name={'man_at_arms'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={6}>
                 <FactionCard faction={'sarleon'} name={'cavalry'}></FactionCard>
@@ -154,7 +160,7 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                    <FactionCard faction={'sarleon'} name={'nobleman'}></FactionCard>
+                <FactionCard faction={'sarleon'} name={'nobleman'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
             <Grid.Col span={9}></Grid.Col>
@@ -162,7 +168,7 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                    <FactionCard faction={'sarleon'} name={'squire_at_arms'}></FactionCard>
+                <FactionCard faction={'sarleon'} name={'squire_at_arms'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
             <Grid.Col span={9}></Grid.Col>
