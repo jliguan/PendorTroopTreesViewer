@@ -63,39 +63,39 @@
             "url": "DShar_Desert_Hunter.png",
             "cost": 80
         },
-        "gazhi_stalker": {
+        "ghazi_stalker": {
             "name": "D'Shar Ghazi Stalker",
             "level": 36,
             "type": "Cavalry Archers",
             "url": "DShar_Ghazi_Stalker.png",
             "cost": 200
         },
-        "gazhi_reaver": {
+        "ghazi_reaver": {
             "name": "D'Shar Ghazi Reaver",
             "level": 36,
             "type": "Cavalry",
             "url": "DShar_Ghazi_Reaver.png",
             "cost": 200
         },
-        "gazhi_dervish": {
+        "ghazi_dervish": {
             "name": "D'Shar Ghazi Dervish",
             "level": 36,
             "type": "Infantry",
             "url": "DShar_Ghazi_Dervish.png",
             "cost": 160
         },
-        "gazhi_spearman": {
+        "ghazi_spearman": {
             "name": "D'Shar Ghazi Spearman",
             "level": 35,
             "type": "Infantry",
-            "url": "DShar_Ghazi_Stalker.png",
+            "url": "DShar_Ghazi_Spearman.png",
             "cost": 200
         },
-        "gazhi_marksman": {
+        "ghazi_marksman": {
             "name": "D'Shar Marksman",
             "level": 35,
             "type": "Archers",
-            "url": "DShar_Marksman.png",
+            "url": "DShar_Ghazi_Marksman.png",
             "cost": 160
         },
         "nobleman": {
@@ -153,7 +153,7 @@
             "name": "Empire Light Infantry",
             "level": 15,
             "type": "Infantry",
-            "url": "Empire_Light_Infanty.png",
+            "url": "Empire_Light_Infantry.png",
             "cost": 0
         },
         "levy_skirmisher": {
@@ -349,7 +349,7 @@
         },
         "noble_warrior": {
             "name": "Fierdsvain Noble Warrior",
-            "level": 1,
+            "level": 21,
             "type": "Cavalry",
             "url": "Fierdsvain_Noble_Warrior.png",
             "cost": 0
@@ -438,6 +438,13 @@
             "level": 21,
             "type": "Cavalry",
             "url": "Pendor_Cavalry.png",
+            "cost": 0
+        },
+        "bladesman": {
+            "name": "Pendor Bladesman",
+            "level": 36,
+            "type": "Infantry",
+            "url": "Pendor_Bladesman.png",
             "cost": 0
         },
         "mtd_man_at_arms": {

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const MajorData = [
     { name: "Sarleon", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Ravenstern", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Fierdsvain", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Empire", linkTo: "/MajorTrees/Sarleon" },
-    { name: "D'Shar", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Pendor", linkTo: "/MajorTrees/Sarleon" }
+    { name: "Ravenstern", linkTo: "/MajorTrees/Ravenstern" },
+    { name: "Fierdsvain", linkTo: "/MajorTrees/Fierdsvain" },
+    { name: "Empire", linkTo: "/MajorTrees/Empire" },
+    { name: "D'Shar", linkTo: "/MajorTrees/DShar" },
+    { name: "Pendor", linkTo: "/MajorTrees/Pendor" }
 ];
 
 export default function MajorGrid() {

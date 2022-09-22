@@ -35,15 +35,15 @@ const useStyles = createStyles(() => ({
     }
 }));
 
-export default function TroopTreeSarleon() {
+export default function TroopTreeFierdsvain() {
 
     const { classes } = useStyles();
 
     return (
-        <Grid grow gutter="sm" justify="center" columns={24} >
+        <Grid grow gutter="sm" justify="center" columns={24}>
 
             <Grid.Col span={24}>
-                <Center sx={{ backgroundColor: '#8B0000' }}>
+                <Center sx={{ backgroundColor: '#008000' }}>
                     <Title order={1}>Commoners</Title>
                 </Center>
             </Grid.Col>
@@ -53,7 +53,16 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'recruit'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'recruit'}></FactionCard>
+            </Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+
+            <Grid.Col span={9}></Grid.Col>
+            <Grid.Col span={6} sx={{ position: 'relative' }}>
+                <ThemeIcon className={classes.arrowDown} size="xl">
+                    <IconArrowDown size={34} stroke={2} />
+                </ThemeIcon>
+                <FactionCard faction={'fierdsvain'} name={'militia'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
 
@@ -65,45 +74,9 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDownRight} size="xl">
                     <IconArrowDownRight size={34} stroke={2} />
                 </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'militia'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'trained_militia'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'trained_militia'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'skirmisher'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'footman'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'longbowman'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
 
             <Grid.Col span={3}></Grid.Col>
             <Grid.Col span={6} sx={{ position: 'relative' }}>
@@ -113,13 +86,16 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDownRight} size="xl">
                     <IconArrowDownRight size={34} stroke={2} />
                 </ThemeIcon>
-                <FactionCard faction={'sarleon'} name={'armored_footman'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'light_infantry'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={3}></Grid.Col>
 
             <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6}>
-                <FactionCard faction={'sarleon'} name={'armored_longbowman'}></FactionCard>
+            <Grid.Col span={6} sx={{ position: 'relative' }}>
+                <ThemeIcon className={classes.arrowDown} size="xl">
+                    <IconArrowDown size={34} stroke={2} />
+                </ThemeIcon>
+                <FactionCard faction={'fierdsvain'} name={'light_skirmisher'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={3}></Grid.Col>
 
@@ -127,24 +103,59 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                    <FactionCard faction={'sarleon'} name={'man_at_arms'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'axeman'}></FactionCard>
             </Grid.Col>
-            <Grid.Col span={6}>
-                <FactionCard faction={'sarleon'} name={'cavalry'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
-
-            <Grid.Col span={6}>
-                <FactionCard faction={'sarleon'} name={'halberdier'}></FactionCard>
+            <Grid.Col span={6} sx={{ position: 'relative' }}>
+                <ThemeIcon className={classes.arrowDown} size="xl">
+                    <IconArrowDown size={34} stroke={2} />
+                </ThemeIcon>
+                <FactionCard faction={'fierdsvain'} name={'spear_maiden'}></FactionCard>
             </Grid.Col>
 
-            <Grid.Col span={6}></Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={6} sx={{ position: 'relative' }}>
+                <ThemeIcon className={classes.arrowDown} size="xl">
+                    <IconArrowDown size={34} stroke={2} />
+                </ThemeIcon>
+                <FactionCard faction={'fierdsvain'} name={'skirmisher'}></FactionCard>
+            </Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={6} sx={{ position: 'relative' }}>
+                <ThemeIcon className={classes.arrowDown} size="xl">
+                    <IconArrowDown size={34} stroke={2} />
+                </ThemeIcon>
+                <ThemeIcon className={classes.arrowDownRight} size="xl">
+                    <IconArrowDownRight size={34} stroke={2} />
+                </ThemeIcon>
+                <FactionCard faction={'fierdsvain'} name={'heavy_axeman'}></FactionCard>
+            </Grid.Col>
+            <Grid.Col span={6} sx={{ position: 'relative' }}>
+                <FactionCard faction={'fierdsvain'} name={'huntress'}></FactionCard>
+            </Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={6}>
+                <FactionCard faction={'fierdsvain'} name={'heavy_skirmisher'}></FactionCard>
+            </Grid.Col>
+
+            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={6}>
+                <FactionCard faction={'fierdsvain'} name={'huscarl'}></FactionCard>
+            </Grid.Col>
+            <Grid.Col span={6}>
+                <FactionCard faction={'fierdsvain'} name={'berserker'}></FactionCard>
+            </Grid.Col>
+
+
+            <Grid.Col span={12}></Grid.Col>
 
             <Grid.Col span={24}>
-                <Center sx={{ backgroundColor: '#8B0000' }}>
+                <Center sx={{ backgroundColor: '#008000' }}>
                     <Title order={1}>Nobles</Title>
                 </Center>
             </Grid.Col>
@@ -154,7 +165,7 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                    <FactionCard faction={'sarleon'} name={'nobleman'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'noble'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
             <Grid.Col span={9}></Grid.Col>
@@ -162,12 +173,12 @@ export default function TroopTreeSarleon() {
                 <ThemeIcon className={classes.arrowDown} size="xl">
                     <IconArrowDown size={34} stroke={2} />
                 </ThemeIcon>
-                    <FactionCard faction={'sarleon'} name={'squire_at_arms'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'noble_warrior'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
             <Grid.Col span={9}></Grid.Col>
             <Grid.Col span={6}>
-                <FactionCard faction={'sarleon'} name={'knight'}></FactionCard>
+                <FactionCard faction={'fierdsvain'} name={'hersir'}></FactionCard>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
 

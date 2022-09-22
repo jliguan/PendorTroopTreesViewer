@@ -15,7 +15,9 @@ export default function FactionCard(props: TroopProps) {
   }));
 
   const { classes } = useStyles();
-  const dir = "/assets/SarleonCropped/" + (TroopData as any)[props.faction][props.name]["url"];
+  // const dir = "/assets/SarleonCropped/" + (TroopData as any)[props.faction][props.name]["url"];
+  const dir = "/assets/" + props.faction + "Cropped/" + (TroopData as any)[props.faction][props.name]["url"];
+  console.log("dir:", dir);
 
   return (
     <Paper shadow="xs" pl="sm" withBorder>

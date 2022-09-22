@@ -21,6 +21,11 @@ import {
   Routes,
 } from "react-router-dom";
 import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
+import TroopTreeRavenstern from './MajorTrees/TroopTreeRavenstern';
+import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
+import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
+import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
+import TroopTreePendor from './MajorTrees/TroopTreePendor';
 
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
@@ -150,10 +155,15 @@ export default function PendorTroopsAppShell() {
         {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
 
         <Container px={0} mx={0} fluid sx={{ height: 'calc(100vh - var(--mantine-header-height))' }}>
-          <ScrollArea style={{ height: '95%' }} type="never">
+          <ScrollArea style={{ height: '95%' }} type="hover" offsetScrollbars>
             <Routes>
               <Route path="/" element={<AccordionCategories />} />
               <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
+              <Route path="/MajorTrees/Ravenstern" element={<TroopTreeRavenstern />} />
+              <Route path="/MajorTrees/Fierdsvain" element={<TroopTreeFierdsvain />} />
+              <Route path="/MajorTrees/Empire" element={<TroopTreeEmpire />} />
+              <Route path="/MajorTrees/DShar" element={<TroopTreeDShar />} />
+              <Route path="/MajorTrees/Pendor" element={<TroopTreePendor />} />
             </Routes>
           </ScrollArea>
         </Container>

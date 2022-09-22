@@ -19,11 +19,11 @@ export default function PendorNavbar() {
         childrenOffset={28}
       >
         <NavLink label="Sarleon" component={Link} to="/MajorTrees/Sarleon" active={location.pathname === '/MajorTrees/Sarleon'} classNames={classes} />
-        <NavLink label="Ravenstern" classNames={classes} />
-        <NavLink label="Fierdsvain" classNames={classes} />
-        <NavLink label="Empire" classNames={classes} />
-        <NavLink label="D'Shar" classNames={classes} />
-        <NavLink label="Pendor" classNames={classes} />
+        <NavLink label="Ravenstern" component={Link} to="/MajorTrees/Ravenstern" active={location.pathname === '/MajorTrees/Ravenstern'} classNames={classes} />
+        <NavLink label="Fierdsvain" component={Link} to="/MajorTrees/Fierdsvain" active={location.pathname === '/MajorTrees/Fierdsvain'} classNames={classes} />
+        <NavLink label="Empire" component={Link} to="/MajorTrees/Empire" active={location.pathname === '/MajorTrees/Empire'} classNames={classes} />
+        <NavLink label="D'Shar" component={Link} to="/MajorTrees/DShar" active={location.pathname === '/MajorTrees/DShar'} classNames={classes} />
+        <NavLink label="Pendor" component={Link} to="/MajorTrees/Pendor" active={location.pathname === '/MajorTrees/Pendor'} classNames={classes} />
       </NavLink>
 
       <NavLink
