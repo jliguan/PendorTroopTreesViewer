@@ -28,12 +28,11 @@ import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
 import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
 import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
 import TroopTreePendor from './MajorTrees/TroopTreePendor';
+import PendorSidebar from './PendorSidebar';
 
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
-
-
 
   return (
     <Router>
@@ -52,13 +51,13 @@ export default function PendorTroopsAppShell() {
           </Navbar>
 
         }
-        aside={
-          <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-            <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
-              <Text>Application sidebar</Text>
-            </Aside>
-          </MediaQuery>
-        }
+        // aside={
+        //   <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+        //     <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
+        //       {/* <Text>Application sidebar</Text> */}
+        //     </Aside>
+        //   </MediaQuery>
+        // }
         header={
           <Header height={70} p="md">
 
@@ -157,7 +156,7 @@ export default function PendorTroopsAppShell() {
         {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
 
         <Container px={0} mx={0} fluid sx={{ height: 'calc(100vh - var(--mantine-header-height))' }}>
-          <ScrollArea style={{ height: '95%' }} type="hover" offsetScrollbars>
+          <ScrollArea style={{ height: '95%' }} type="hover" offsetScrollbars scrollbarSize={8}>
             <Routes>
               <Route path="/" element={<AccordionCategories />} />
               <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />

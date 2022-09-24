@@ -42,7 +42,6 @@ export default function AvatarTroop(props: TroopProps) {
                     width={100}
                     height={84}
                     classNames={{
-                        // image: classes.regular
                         image: category.includes("Cavalry") ? classes.horseview : classes.regular
                     }}
                     sx={(theme) => ({
