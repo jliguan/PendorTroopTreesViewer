@@ -133,98 +133,98 @@
             "level": 5,
             "type": "Infantry",
             "url": "Empire_Levy_Recruit.png",
-            "cost": 0
+            "cost": 10
         },
         "levy_militia": {
             "name": "Empire Levy Militia",
             "level": 10,
             "type": "Infantry",
             "url": "Empire_Levy_Militia.png",
-            "cost": 0
+            "cost": 10
         },
         "levy_hunter": {
             "name": "Empire Levy Hunter",
             "level": 10,
             "type": "Archers",
             "url": "Empire_Levy_Hunter.png",
-            "cost": 0
+            "cost": 10
         },
         "light_infantry": {
             "name": "Empire Light Infantry",
             "level": 15,
             "type": "Infantry",
             "url": "Empire_Light_Infantry.png",
-            "cost": 0
+            "cost": 20
         },
         "levy_skirmisher": {
             "name": "Empire Levy Skirmisher",
             "level": 15,
             "type": "Archers",
             "url": "Empire_Levy_Skirmisher.png",
-            "cost": 0
+            "cost": 20
         },
         "levy_horseman": {
             "name": "Empire Levy Horseman",
             "level": 15,
-            "type": "Cavalry Archers",
+            "type": "Cavalry",
             "url": "Empire_Levy_Horseman.png",
-            "cost": 0
+            "cost": 20
         },
         "pikeman": {
             "name": "Empire Pikeman",
             "level": 20,
             "type": "Infantry",
             "url": "Empire_Pikeman.png",
-            "cost": 0
+            "cost": 40
         },
         "heavy_infantry": {
             "name": "Empire Heavy Infantry",
             "level": 20,
             "type": "Infantry",
             "url": "Empire_Heavy_Infantry.png",
-            "cost": 0
+            "cost": 40
         },
         "crossbowman": {
             "name": "Empire Crossbowman",
             "level": 30,
             "type": "Archers",
             "url": "Empire_Crossbowman.png",
-            "cost": 0
+            "cost": 40
         },
         "cavalry": {
             "name": "Empire Cavalry",
             "level": 30,
-            "type": "Cavalry Archers",
+            "type": "Cavalry",
             "url": "Empire_Cavalry.png",
-            "cost": 0
+            "cost": 40
         },
         "armored_pikeman": {
             "name": "Empire Armored Pikeman",
             "level": 30,
             "type": "Infantry",
             "url": "Empire_Armored_Pikeman.png",
-            "cost": 0
+            "cost": 80
         },
         "legionnaire": {
             "name": "Empire Legionnaire",
             "level": 35,
             "type": "Infantry",
             "url": "Empire_Legionnaire.png",
-            "cost": 0
+            "cost": 80
         },
         "armored_crossbowman": {
             "name": "Empire Armored Crossbowman",
             "level": 35,
             "type": "Archers",
             "url": "Empire_Armored_Crossbowman.png",
-            "cost": 0
+            "cost": 160
         },
         "gladiator": {
             "name": "Empire Gladiator",
             "level": 50,
             "type": "Infantry",
             "url": "Empire_Gladiator.png",
-            "cost": 0
+            "cost": 160
         },
         "nobleman": {
             "name": "Empire Nobleman",
@@ -238,14 +238,14 @@
             "level": 15,
             "type": "Infantry",
             "url": "Empire_Noble_Legionnaire_Recruit.png",
-            "cost": 0
+            "cost": 20
         },
         "knight": {
             "name": "Empire Knight",
             "level": 40,
             "type": "Cavalry",
             "url": "Empire_Knight.png",
-            "cost": 0
+            "cost": 40
         }
     },
     "fierdsvain": {
@@ -261,84 +261,84 @@
             "level": 5,
             "type": "Infantry",
             "url": "Fierdsvain_Militia.png",
-            "cost": 0
+            "cost": 10
         },
         "trained_militia": {
             "name": "Fierdsvain Trained Militia",
             "level": 10,
             "type": "Infantry",
             "url": "Fierdsvain_Trained_Militia.png",
-            "cost": 0
+            "cost": 10
         },
         "light_infantry": {
             "name": "Fierdsvain Light Infantry",
             "level": 16,
             "type": "Infantry",
             "url": "Fierdsvain_Light_Infantry.png",
-            "cost": 0
+            "cost": 20
         },
         "light_skirmisher": {
             "name": "Fierdsvain Light Skirmisher",
             "level": 16,
             "type": "Archers",
             "url": "Fierdsvain_Light_Skirmisher.png",
-            "cost": 0
+            "cost": 20
         },
         "axeman": {
             "name": "Fierdsvain Axeman",
             "level": 21,
             "type": "Infantry",
             "url": "Fierdsvain_Axeman.png",
-            "cost": 0
+            "cost": 80
         },
         "spear_maiden": {
             "name": "Fierdsvain Spear Maiden",
             "level": 26,
             "type": "Infantry",
             "url": "Fierdsvain_spear_maiden.png",
-            "cost": 0
+            "cost": 80
         },
         "skirmisher": {
             "name": "Fierdsvain Skirmisher",
             "level": 21,
             "type": "Archers",
             "url": "Fierdsvain_Skirmisher.png",
-            "cost": 0
+            "cost": 80
         },
         "heavy_axeman": {
             "name": "Fierdsvain Heavy Axeman",
             "level": 31,
             "type": "Infantry",
             "url": "Fierdsvain_Heavy_Axeman.png",
-            "cost": 0
+            "cost": 120
         },
         "huntress": {
             "name": "Fierdsvain Huntress",
             "level": 35,
             "type": "Infantry",
             "url": "Fierdsvain_Huntress.png",
-            "cost": 0
+            "cost": 160
         },
         "heavy_skirmisher": {
             "name": "Fierdsvain Heavy Skirmisher",
             "level": 31,
             "type": "Archers",
             "url": "Fierdsvain_Heavy_Skirmisher.png",
-            "cost": 0
+            "cost": 120
         },
         "huscarl": {
             "name": "Fierdsvain Huscarl",
             "level": 38,
             "type": "Infantry",
             "url": "Fierdsvain_Huscarl.png",
-            "cost": 0
+            "cost": 200
         },
         "berserker": {
             "name": "Fierdsvain Berserker",
             "level": 50,
             "type": "Infantry",
             "url": "Fierdsvain_Berserker.png",
-            "cost": 0
+            "cost": 200
         },
         "noble": {
             "name": "Fierdsvain Noble",
@@ -352,14 +352,14 @@
             "level": 21,
             "type": "Cavalry",
             "url": "Fierdsvain_Noble_Warrior.png",
-            "cost": 0
+            "cost": 80
         },
         "hersir": {
             "name": "Fierdsvain Hersir",
             "level": 40,
             "type": "Cavalry",
             "url": "Fierdsvain_Hersir.png",
-            "cost": 0
+            "cost": 120
         }
     },
     "pendor": {
@@ -375,84 +375,84 @@
             "level": 10,
             "type": "Infantry",
             "url": "Pendor_Militia.png",
-            "cost": 0
+            "cost": 10
         },
         "light_bowman": {
             "name": "Pendor Light Bowman",
             "level": 10,
             "type": "Archers",
             "url": "Pendor_Light_Bowman.png",
-            "cost": 0
+            "cost": 10
         },
         "footman": {
             "name": "Pendor Footman",
             "level": 15,
             "type": "Infantry",
             "url": "Pendor_Footman.png",
-            "cost": 0
+            "cost": 20
         },
         "heavy_bowman": {
             "name": "Pendor Heavy Bowman",
             "level": 15,
             "type": "Archers",
             "url": "Pendor_Heavy_Bowman.png",
-            "cost": 0
+            "cost": 20
         },
         "swordsman": {
             "name": "Pendor Swordsman",
             "level": 20,
             "type": "Infantry",
             "url": "Pendor_Swordsman.png",
-            "cost": 0
+            "cost": 40
         },
         "spearman": {
             "name": "Pendor Spearman",
             "level": 20,
             "type": "Infantry",
             "url": "Pendor_Spearman.png",
-            "cost": 0
+            "cost": 40
         },
         "armored_bowman": {
             "name": "Pendor Armored Bowman",
             "level": 30,
             "type": "Archers",
             "url": "Pendor_Armored_Bowman.png",
-            "cost": 0
+            "cost": 40
         },
         "man_at_arms": {
             "name": "Pendor Man-at-Arms",
             "level": 30,
             "type": "Infantry",
             "url": "Pendor_Man_at_Arms.png",
-            "cost": 0
+            "cost": 80
         },
         "heavy_spearman": {
             "name": "Pendor Heavy Spearman",
             "level": 30,
             "type": "Infantry",
             "url": "Pendor_Heavy_Spearman.png",
-            "cost": 0
+            "cost": 80
         },
         "cavalry": {
             "name": "Pendor Cavalry",
             "level": 21,
             "type": "Cavalry",
             "url": "Pendor_Cavalry.png",
-            "cost": 0
+            "cost": 80
         },
         "bladesman": {
             "name": "Pendor Bladesman",
             "level": 36,
             "type": "Infantry",
             "url": "Pendor_Bladesman.png",
-            "cost": 0
+            "cost": 160
         },
         "mtd_man_at_arms": {
             "name": "Pendor Mtd. Man-at-Arms",
             "level": 30,
             "type": "Cavalry",
             "url": "Pendor_Mtd_Man_at_Arms.png",
-            "cost": 0
+            "cost": 120
         },
         "nobleman": {
             "name": "Pendor Nobleman",
@@ -466,35 +466,35 @@
             "level": 20,
             "type": "Cavalry",
             "url": "Pendor_Squire.png",
-            "cost": 0
+            "cost": 40
         },
         "noble_bowman": {
             "name": "Pendor Noble Bowman",
             "level": 21,
             "type": "Archers",
             "url": "Pendor_Noble_Bowman.png",
-            "cost": 0
+            "cost": 40
         },
         "knight": {
             "name": "Pendor Knight",
             "level": 40,
             "type": "Cavalry",
             "url": "Pendor_Knight.png",
-            "cost": 0
+            "cost": 80
         },
         "foot_knight": {
             "name": "Pendor Foot Knight",
             "level": 40,
             "type": "Infantry",
             "url": "Pendor_Foot_Knight.png",
-            "cost": 0
+            "cost": 80
         },
         "black_archer": {
             "name": "Pendor Black Archer",
             "level": 40,
             "type": "Archers",
             "url": "Pendor_Black_Archer.png",
-            "cost": 0
+            "cost": 120
         }
     },
     "ravenstern": {
@@ -510,77 +510,77 @@
             "level": 5,
             "type": "Infantry",
             "url": "Ravenstern_Militia.png",
-            "cost": 0
+            "cost": 10
         },
         "trained_militia": {
             "name": "Ravenstern Trained Militia",
             "level": 10,
             "type": "Infantry",
             "url": "Ravenstern_Trained_Militia.png",
-            "cost": 0
+            "cost": 10
         },
         "skirmisher": {
             "name": "Ravenstern Skirmisher",
             "level": 10,
             "type": "Archers",
             "url": "Ravenstern_Skirmisher.png",
-            "cost": 0
+            "cost": 10
         },
         "footman": {
             "name": "Ravenstern Footman",
             "level": 15,
             "type": "Infantry",
             "url": "Ravenstern_Footman.png",
-            "cost": 0
+            "cost": 20
         },
         "archer": {
             "name": "Ravenstern Archer",
             "level": 15,
             "type": "Archers",
             "url": "Ravenstern_Archer.png",
-            "cost": 0
+            "cost": 20
         },
         "man_at_arms": {
             "name": "Ravenstern Man-at-Arms",
             "level": 20,
             "type": "Infantry",
             "url": "Ravenstern_Man_at_Arms.png",
-            "cost": 0
+            "cost": 40
         },
         "horseman": {
             "name": "Ravenstern Horseman",
             "level": 20,
             "type": "Cavalry",
             "url": "Ravenstern_Horseman.png",
-            "cost": 0
+            "cost": 40
         },
         "warden": {
             "name": "Ravenstern Warden",
             "level": 20,
             "type": "Archers",
             "url": "Ravenstern_Warden.png",
-            "cost": 0
+            "cost": 40
         },
         "kierguard": {
             "name": "Ravenstern Kierguard",
             "level": 35,
             "type": "Infantry",
             "url": "Ravenstern_Kierguard.png",
-            "cost": 0
+            "cost": 80
         },
         "ranger": {
             "name": "Ravenstern Ranger",
             "level": 35,
             "type": "Archers",
             "url": "Ravenstern_Ranger.png",
-            "cost": 0
+            "cost": 80
         },
         "mtd_ranger": {
             "name": "Ravenstern Mtd. Ranger",
             "level": 35,
             "type": "Cavalry Archers",
             "url": "Ravenstern_Mtd_Ranger.png",
-            "cost": 0
+            "cost": 80
         },
         "nobleman": {
             "name": "Ravenstern Nobleman",
@@ -594,21 +594,21 @@
             "level": 20,
             "type": "Cavalry",
             "url": "Ravenstern_Squire_at_Arms.png",
-            "cost": 0
+            "cost": 40
         },
         "knight": {
             "name": "Ravenstern Knight",
             "level": 40,
             "type": "Cavalry",
             "url": "Ravenstern_Knight.png",
-            "cost": 0
+            "cost": 80
         },
         "highlander": {
             "name": "Ravenstern Highlander",
             "level": 39,
             "type": "Infantry",
             "url": "Ravenstern_Highlander.png",
-            "cost": 0
+            "cost": 80
         }
     },
     "sarleon": {

@@ -1,184 +1,271 @@
-import { Center, createStyles, Grid, ThemeIcon, Title } from '@mantine/core';
-import { IconArrowDown, IconArrowDownLeft, IconArrowDownRight } from '@tabler/icons';
-import FactionCard from '../FactionCard';
-
-const useStyles = createStyles(() => ({
-    arrowDown: {
-        position: 'absolute',
-        bottom: '0',
-        left: '50%',
-        transform: 'translate(-50%, 50%)',
-        backgroundColor: 'transparent',
-        color: 'grey',
-        padding: '0',
-        zIndex: 100
-    },
-    arrowDownLeft: {
-        position: 'absolute',
-        bottom: '0',
-        left: '0',
-        transform: 'translate(-50%, 50%)',
-        backgroundColor: 'transparent',
-        color: 'grey',
-        padding: '0',
-        zIndex: 100
-    },
-    arrowDownRight: {
-        position: 'absolute',
-        bottom: '0',
-        right: '0',
-        transform: 'translate(50%, 50%)',
-        backgroundColor: 'transparent',
-        color: 'grey',
-        padding: '0',
-        zIndex: 100
-    }
-}));
+import { Center, Divider, Grid, Title } from '@mantine/core';
+import AvatarTroop from '../AvatarTroop';
 
 export default function TroopTreeFierdsvain() {
-
-    const { classes } = useStyles();
-
     return (
-        <Grid grow gutter="sm" justify="center" columns={24}>
+        <Grid grow gutter="sm" justify="center" columns={24} >
+
+            <Grid.Col span={24}>
+                <Title order={1} pl="lg">Fierdsvain</Title>
+                <Divider my="sm" mb={0} />
+            </Grid.Col>
 
             <Grid.Col span={24}>
                 <Center sx={{ backgroundColor: '#008000' }}>
-                    <Title order={1}>Commoners</Title>
+                    <Title order={2}>Commoners</Title>
                 </Center>
             </Grid.Col>
 
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'recruit'}></FactionCard>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'recruit'}></AvatarTroop>
+                </Center>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
 
-            <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'militia'}></FactionCard>
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
             </Grid.Col>
-            <Grid.Col span={9}></Grid.Col>
+
 
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDownLeft} size="xl">
-                    <IconArrowDownLeft size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'trained_militia'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={9}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDownLeft} size="xl">
-                    <IconArrowDownLeft size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'light_infantry'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'light_skirmisher'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'axeman'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'spear_maiden'}></FactionCard>
-            </Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'skirmisher'}></FactionCard>
-            </Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'heavy_axeman'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <FactionCard faction={'fierdsvain'} name={'huntress'}></FactionCard>
-            </Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
 
             <Grid.Col span={6}>
-                <FactionCard faction={'fierdsvain'} name={'heavy_skirmisher'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'militia'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'trained_militia'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={12} p={0}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'light_infantry'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'light_skirmisher'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={6} p={0}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
 
             <Grid.Col span={6}>
-                <FactionCard faction={'fierdsvain'} name={'huscarl'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6}>
-                <FactionCard faction={'fierdsvain'} name={'berserker'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'axeman'}></AvatarTroop>
+                </Center>
             </Grid.Col>
 
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'spear_maiden'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+
+
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'skirmisher'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'heavy_axeman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'huntress'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'heavy_skirmisher'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={6} p={0} mt={-5}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'huscarl'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'berserker'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
 
             <Grid.Col span={12}></Grid.Col>
 
+
             <Grid.Col span={24}>
                 <Center sx={{ backgroundColor: '#008000' }}>
-                    <Title order={1}>Nobles</Title>
+                    <Title order={2}>Nobles</Title>
                 </Center>
             </Grid.Col>
 
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'noble'}></FactionCard>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'noble'}></AvatarTroop>
+                </Center>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'fierdsvain'} name={'noble_warrior'}></FactionCard>
+
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
             </Grid.Col>
-            <Grid.Col span={9}></Grid.Col>
+
             <Grid.Col span={9}></Grid.Col>
             <Grid.Col span={6}>
-                <FactionCard faction={'fierdsvain'} name={'hersir'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'noble_warrior'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={9}></Grid.Col>
+
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={9}></Grid.Col>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'fierdsvain'} name={'hersir'}></AvatarTroop>
+                </Center>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
 

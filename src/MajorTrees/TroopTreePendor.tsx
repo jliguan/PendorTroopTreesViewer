@@ -1,208 +1,336 @@
-import { Center, createStyles, Grid, ThemeIcon, Title } from '@mantine/core';
-import { IconArrowDown, IconArrowDownLeft, IconArrowDownRight } from '@tabler/icons';
-import FactionCard from '../FactionCard';
-
-const useStyles = createStyles(() => ({
-    arrowDown: {
-        position: 'absolute',
-        bottom: '0',
-        left: '50%',
-        transform: 'translate(-50%, 50%)',
-        backgroundColor: 'transparent',
-        color: 'grey',
-        padding: '0',
-        zIndex: 100
-    },
-    arrowDownLeft: {
-        position: 'absolute',
-        bottom: '0',
-        left: '0',
-        transform: 'translate(-50%, 50%)',
-        backgroundColor: 'transparent',
-        color: 'grey',
-        padding: '0',
-        zIndex: 100
-    },
-    arrowDownRight: {
-        position: 'absolute',
-        bottom: '0',
-        right: '0',
-        transform: 'translate(50%, 50%)',
-        backgroundColor: 'transparent',
-        color: 'grey',
-        padding: '0',
-        zIndex: 100
-    }
-}));
+import { Center, Divider, Grid, Title } from '@mantine/core';
+import AvatarTroop from '../AvatarTroop';
 
 export default function TroopTreePendor() {
-
-    const { classes } = useStyles();
-
     return (
-        <Grid grow gutter="sm" justify="center" columns={24}>
+        <Grid grow gutter="sm" justify="center" columns={24} >
+
+            <Grid.Col span={24}>
+                <Title order={1} pl="lg">Pendor</Title>
+                <Divider my="sm" mb={0} />
+            </Grid.Col>
 
             <Grid.Col span={24}>
                 <Center sx={{ backgroundColor: '#A9A9A9' }}>
-                    <Title order={1}>Commoners</Title>
+                    <Title order={2}>Commoners</Title>
                 </Center>
             </Grid.Col>
 
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDownLeft} size="xl">
-                    <IconArrowDownLeft size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'recruit'}></FactionCard>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'recruit'}></AvatarTroop>
+                </Center>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
 
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'militia'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'light_bowman'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDownLeft} size="xl">
-                    <IconArrowDownLeft size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'footman'}></FactionCard>
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={12} p={0}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
 
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'heavy_bowman'}></FactionCard>
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
             </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'swordsman'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'spearman'}></FactionCard>
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'militia'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'light_bowman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'footman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'heavy_bowman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={6} p={0}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'swordsman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
 
             <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'armored_bowman'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'spearman'}></AvatarTroop>
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={3}></Grid.Col>
-
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'man_at_arms'}></FactionCard>
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'armored_bowman'}></AvatarTroop>
+                </Center>
             </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}></Grid.Col>
+
+            <Grid.Col span={9} p={0}></Grid.Col>
+            <Grid.Col span={6} p={0} mt={-5}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={9} p={0}></Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} p={0}></Grid.Col>
+
             <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'heavy_spearman'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'man_at_arms'}></AvatarTroop>
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'cavalry'}></FactionCard>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'heavy_spearman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'cavalry'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
+
+
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'bladesman'}></AvatarTroop>
+                </Center>
             </Grid.Col>
 
             <Grid.Col span={6}></Grid.Col>
 
             <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'bladesman'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'mtd_man_at_arms'}></AvatarTroop>
+                </Center>
             </Grid.Col>
 
             <Grid.Col span={6}></Grid.Col>
 
-            <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'mtd_man_at_arms'}></FactionCard>
-            </Grid.Col>
-
-            <Grid.Col span={6}></Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
 
             <Grid.Col span={24}>
                 <Center sx={{ backgroundColor: '#A9A9A9' }}>
-                    <Title order={1}>Nobles</Title>
+                    <Title order={2}>Nobles</Title>
                 </Center>
             </Grid.Col>
 
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDownLeft} size="xl">
-                    <IconArrowDownLeft size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'nobleman'}></FactionCard>
+            <Grid.Col span={6}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'nobleman'}></AvatarTroop>
+                </Center>
             </Grid.Col>
             <Grid.Col span={9}></Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDownLeft} size="xl">
-                    <IconArrowDownLeft size={34} stroke={2} />
-                </ThemeIcon>
-                <ThemeIcon className={classes.arrowDownRight} size="xl">
-                    <IconArrowDownRight size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'squire'}></FactionCard>
+
+            <Grid.Col span={24} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={6}></Grid.Col>
-
-            <Grid.Col span={6} sx={{ position: 'relative' }}>
-                <ThemeIcon className={classes.arrowDown} size="xl">
-                    <IconArrowDown size={34} stroke={2} />
-                </ThemeIcon>
-                <FactionCard faction={'pendor'} name={'noble_bowman'}></FactionCard>
+            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={12} p={0}>
+                <Divider size={5} />
             </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'squire'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'noble_bowman'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={6} p={0}>
+                <Divider size={5} />
+            </Grid.Col>
+            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
+            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                <Center>
+                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                </Center>
+            </Grid.Col>
+
             <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'knight'}></FactionCard>
-            </Grid.Col>
-            <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'foot_knight'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'knight'}></AvatarTroop>
+                </Center>
             </Grid.Col>
 
-            <Grid.Col span={3}></Grid.Col>
-
             <Grid.Col span={6}>
-                <FactionCard faction={'pendor'} name={'black_archer'}></FactionCard>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'foot_knight'}></AvatarTroop>
+                </Center>
             </Grid.Col>
-            <Grid.Col span={3}></Grid.Col>
+
+            <Grid.Col span={12}>
+                <Center>
+                    <AvatarTroop faction={'pendor'} name={'black_archer'}></AvatarTroop>
+                </Center>
+            </Grid.Col>
 
 
 

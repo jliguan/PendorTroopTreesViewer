@@ -10,7 +10,9 @@ import {
   Anchor,
   Autocomplete,
   Grid,
-  Container
+  Container,
+  Aside,
+  Text
 } from '@mantine/core';
 import AccordionCategories from './AccordionCategories';
 import PendorNavbar from './PendorNavbar';
@@ -50,13 +52,13 @@ export default function PendorTroopsAppShell() {
           </Navbar>
 
         }
-        // aside={
-        //   <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-        //     <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
-        //       <Text>Application sidebar</Text>
-        //     </Aside>
-        //   </MediaQuery>
-        // }
+        aside={
+          <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+            <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
+              <Text>Application sidebar</Text>
+            </Aside>
+          </MediaQuery>
+        }
         header={
           <Header height={70} p="md">
 
