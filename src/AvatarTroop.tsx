@@ -1,4 +1,5 @@
-import { createStyles, Image, Stack, Text } from '@mantine/core';
+import { createStyles, Image, Skeleton, Stack, Text } from '@mantine/core';
+import { useState } from 'react';
 import TroopData from './TroopData.json';
 
 interface TroopProps {
@@ -23,34 +24,40 @@ export default function AvatarTroop(props: TroopProps) {
     const dir = "/assets/" + props.faction + "Cropped/" + (TroopData as any)[props.faction][props.name]["url"];
     console.log("dir:", dir);
 
-    const category:string = (TroopData as any)[props.faction][props.name]["type"];
+    const category: string = (TroopData as any)[props.faction][props.name]["type"];
+
+    const [loading, setLoading] = useState(true);
 
     return (
 
+
         <Stack align="center" spacing={0}>
-            <Image
-                radius="xs"
-                src={dir}
-                alt={(TroopData as any)[props.faction][props.name]["name"]}
-                fit="cover"
-                width={100}
-                height={84}
-                classNames={{
-                    // image: classes.regular
-                    image: category.includes("Cavalry") ? classes.horseview : classes.regular
-                }}
-                sx={(theme) => ({
+            <Skeleton visible={loading} sx={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+                <Image
+                    onLoad={() => setLoading((l) => !l)}
+                    radius="xs"
+                    src={dir}
+                    alt={(TroopData as any)[props.faction][props.name]["name"]}
+                    fit="cover"
+                    width={100}
+                    height={84}
+                    classNames={{
+                        // image: classes.regular
+                        image: category.includes("Cavalry") ? classes.horseview : classes.regular
+                    }}
+                    sx={(theme) => ({
 
-                    '&:hover': {
-                        backgroundColor: `${theme.colors.dark[6]}`
-                    },
-                    cursor: 'pointer'
+                        '&:hover': {
+                            backgroundColor: `${theme.colors.dark[6]}`
+                        },
+                        cursor: 'pointer'
 
-                })}
-            />
+                    })}
+                />
+            </Skeleton>
             <Text align='center' size="sm">
                 {(TroopData as any)[props.faction][props.name]["name"]}
             </Text>
-        </Stack>
+        </Stack >
     );
 }
