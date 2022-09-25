@@ -22,7 +22,6 @@ export default function AvatarTroop(props: TroopProps) {
 
     const { classes } = useStyles();
     const dir = "/assets/" + props.faction + "Cropped/" + (TroopData as any)[props.faction][props.name]["url"];
-    console.log("dir:", dir);
 
     const category: string = (TroopData as any)[props.faction][props.name]["type"];
 

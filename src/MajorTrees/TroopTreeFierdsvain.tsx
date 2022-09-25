@@ -1,23 +1,34 @@
-import { ActionIcon, Center, Divider, Grid, MediaQuery, Tabs, Title, UnstyledButton } from '@mantine/core';
-import { useSetState } from '@mantine/hooks';
+import { ActionIcon, Center, Divider, Drawer, Grid, MediaQuery, Tabs, Title, UnstyledButton } from '@mantine/core';
+import { useSetState, useViewportSize } from '@mantine/hooks';
 import { IconArrowLeft } from '@tabler/icons'
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AvatarTroop from '../AvatarTroop';
+import PendorDrawer from '../PendorDrawer';
 import PendorSidebar from '../PendorSidebar';
 
 export default function TroopTreeFierdsvain() {
 
     const [state, setState] = useSetState({ faction: '', name: '' });
+    const [opened, setOpened] = useState(false);
+    const { width } = useViewportSize();
+
+    function showStats(f: string, n: string) {
+        setState({ faction: f, name: n });
+        if (width <= 1000) {
+            setOpened(true);
+        }
+    }
 
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
 
-            <Grid.Col span={8}>
+            <Grid.Col span={6}>
                 <ActionIcon size="xl" variant="transparent" component={Link} to="/">
                     <IconArrowLeft />
                 </ActionIcon>
             </Grid.Col>
-            <Grid.Col span={8}>
+            <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
                         <Title order={1}>Fierdsvain</Title>
@@ -28,7 +39,7 @@ export default function TroopTreeFierdsvain() {
                 </Center>
 
             </Grid.Col>
-            <Grid.Col span={8}></Grid.Col>
+            <Grid.Col span={6}></Grid.Col>
 
             <Grid.Col span={24} p={0}>
                 <Divider my="sm" mb={0} mt={0} />
@@ -44,15 +55,13 @@ export default function TroopTreeFierdsvain() {
                     <Tabs.Panel value="first" pt="xs">
 
                         <Grid grow gutter="sm" justify="center" columns={24} >
-                            <Grid.Col span={9}></Grid.Col>
-                            <Grid.Col span={6}>
+                            <Grid.Col span={24}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'recruit' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'recruit')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'recruit'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={9}></Grid.Col>
 
                             <Grid.Col span={24} pt={0} pb={0}>
                                 <Center>
@@ -61,16 +70,13 @@ export default function TroopTreeFierdsvain() {
                             </Grid.Col>
 
 
-                            <Grid.Col span={9}></Grid.Col>
-
-                            <Grid.Col span={6}>
+                            <Grid.Col span={24}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'militia' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'militia')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'militia'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={9}></Grid.Col>
 
                             <Grid.Col span={24} pt={0} pb={0}>
                                 <Center>
@@ -78,15 +84,13 @@ export default function TroopTreeFierdsvain() {
                                 </Center>
                             </Grid.Col>
 
-                            <Grid.Col span={9}></Grid.Col>
-                            <Grid.Col span={6}>
+                            <Grid.Col span={24}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'trained_militia' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'trained_militia')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'trained_militia'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={9}></Grid.Col>
 
                             <Grid.Col span={24} pt={0} pb={0}>
                                 <Center>
@@ -114,7 +118,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'light_infantry' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'light_infantry')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'light_infantry'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -122,7 +126,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'light_skirmisher' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'light_skirmisher')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'light_skirmisher'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -167,7 +171,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'axeman' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'axeman')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'axeman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -175,7 +179,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'spear_maiden' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'spear_maiden')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'spear_maiden'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -183,7 +187,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'skirmisher' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'skirmisher')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'skirmisher'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -207,7 +211,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'heavy_axeman' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'heavy_axeman')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'heavy_axeman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -215,7 +219,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'huntress' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'huntress')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'huntress'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -223,7 +227,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'heavy_skirmisher' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'heavy_skirmisher')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'heavy_skirmisher'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -261,7 +265,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'huscarl' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'huscarl')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'huscarl'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -269,7 +273,7 @@ export default function TroopTreeFierdsvain() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'berserker' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'berserker')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'berserker'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -281,15 +285,13 @@ export default function TroopTreeFierdsvain() {
 
                     <Tabs.Panel value="second" pt="xs">
                         <Grid grow gutter="sm" justify="center" columns={24}>
-                            <Grid.Col span={9}></Grid.Col>
-                            <Grid.Col span={6}>
+                            <Grid.Col span={24}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'noble' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'noble')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'noble'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={9}></Grid.Col>
 
                             <Grid.Col span={24} pt={0} pb={0}>
                                 <Center>
@@ -297,15 +299,13 @@ export default function TroopTreeFierdsvain() {
                                 </Center>
                             </Grid.Col>
 
-                            <Grid.Col span={9}></Grid.Col>
-                            <Grid.Col span={6}>
+                            <Grid.Col span={24}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'noble_warrior' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'noble_warrior')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'noble_warrior'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={9}></Grid.Col>
 
                             <Grid.Col span={24} pt={0} pb={0}>
                                 <Center>
@@ -313,21 +313,31 @@ export default function TroopTreeFierdsvain() {
                                 </Center>
                             </Grid.Col>
 
-                            <Grid.Col span={9}></Grid.Col>
-                            <Grid.Col span={6}>
+                            <Grid.Col span={24}>
                                 <Center>
-                                    <UnstyledButton onClick={() => setState({ faction: 'fierdsvain', name: 'hersir' })}>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'hersir')}>
                                         <AvatarTroop faction={'fierdsvain'} name={'hersir'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={9}></Grid.Col>
                         </Grid>
                     </Tabs.Panel>
                 </Tabs>
             </Grid.Col>
 
             <PendorSidebar faction={state.faction} name={state.name} />
+
+            <Drawer
+                opened={opened}
+                onClose={() => setOpened(false)}
+                padding="md"
+                size={300}
+                position="right"
+                withCloseButton={false}
+            >
+                {/* Drawer content */}
+                <PendorDrawer faction={state.faction} name={state.name} />
+            </Drawer>
 
         </Grid>
     );

@@ -22,7 +22,6 @@ export default function PendorSidebar(props: TroopProps) {
         return (
             <MediaQuery smallerThan={1000} styles={{ display: 'none' }}>
                 <Aside width={{ sm: 300, lg: 300 }}>
-                    <Text>a</Text>
                 </Aside>
             </MediaQuery>
         );
@@ -73,6 +72,8 @@ export default function PendorSidebar(props: TroopProps) {
                                             <tr>
                                                 <th>
                                                     Attributes
+                                                </th>
+                                                <th>
                                                 </th>
                                             </tr>
                                         </thead>
