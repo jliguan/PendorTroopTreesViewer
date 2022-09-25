@@ -1,9 +1,14 @@
-import { ActionIcon, Center, Divider, Grid, Group, Tabs, Title } from '@mantine/core';
+import { ActionIcon, Aside, Button, Center, Divider, Grid, Tabs, Title, UnstyledButton } from '@mantine/core';
+import { useSetState } from '@mantine/hooks';
 import { IconArrowLeft } from '@tabler/icons'
 import { Link } from 'react-router-dom';
 import AvatarTroop from '../AvatarTroop';
+import PendorSidebar from '../PendorSidebar';
 
 export default function TroopTreePendor() {
+
+    const [state, setState] = useSetState({ faction: '', name: '' });
+
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
 
@@ -37,7 +42,9 @@ export default function TroopTreePendor() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'recruit'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'recruit' })}>
+                                        <AvatarTroop faction={'pendor'} name={'recruit'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -68,13 +75,17 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'militia'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'militia' })}>
+                                        <AvatarTroop faction={'pendor'} name={'militia'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'light_bowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'light_bowman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'light_bowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -92,13 +103,17 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'footman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'footman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'footman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'heavy_bowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'heavy_bowman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'heavy_bowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -141,19 +156,25 @@ export default function TroopTreePendor() {
                             </Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'swordsman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'swordsman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'swordsman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'spearman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'spearman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'spearman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'armored_bowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'armored_bowman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'armored_bowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -198,19 +219,25 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'man_at_arms'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'man_at_arms' })}>
+                                        <AvatarTroop faction={'pendor'} name={'man_at_arms'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'heavy_spearman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'heavy_spearman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'heavy_spearman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'cavalry'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'cavalry' })}>
+                                        <AvatarTroop faction={'pendor'} name={'cavalry'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -231,7 +258,9 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'bladesman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'bladesman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'bladesman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -239,7 +268,9 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'mtd_man_at_arms'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'mtd_man_at_arms' })}>
+                                        <AvatarTroop faction={'pendor'} name={'mtd_man_at_arms'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -252,7 +283,9 @@ export default function TroopTreePendor() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'nobleman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'nobleman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'nobleman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -282,13 +315,17 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'squire'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'squire' })}>
+                                        <AvatarTroop faction={'pendor'} name={'squire'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'noble_bowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'noble_bowman' })}>
+                                        <AvatarTroop faction={'pendor'} name={'noble_bowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -331,25 +368,34 @@ export default function TroopTreePendor() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'knight'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'knight' })}>
+                                        <AvatarTroop faction={'pendor'} name={'knight'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'foot_knight'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'foot_knight' })}>
+                                        <AvatarTroop faction={'pendor'} name={'foot_knight'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'pendor'} name={'black_archer'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'pendor', name: 'black_archer' })}>
+                                        <AvatarTroop faction={'pendor'} name={'black_archer'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                         </Grid>
                     </Tabs.Panel>
                 </Tabs>
             </Grid.Col>
+
+            <PendorSidebar faction={state.faction} name={state.name} />
+
         </Grid>
     );
 }

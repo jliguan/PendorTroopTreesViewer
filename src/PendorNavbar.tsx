@@ -30,6 +30,7 @@ export default function PendorNavbar() {
         label="Minor Factions"
         childrenOffset={28}
         // opened={location.pathname.includes("MinorTrees")}
+        disabled
       >
         <NavLink label="Heretics" classNames={classes} />
         <NavLink label="Jatu" classNames={classes} />
@@ -54,6 +55,7 @@ export default function PendorNavbar() {
         label="Knighthood Orders"
         childrenOffset={28}
         // opened={location.pathname.includes("KOTrees")}
+        disabled
       >
         <NavLink label="Order of the Lion" classNames={classes} />
         <NavLink label="Order of the Dragon" classNames={classes} />

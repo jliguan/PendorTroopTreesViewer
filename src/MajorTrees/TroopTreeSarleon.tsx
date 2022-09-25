@@ -1,10 +1,14 @@
-import { ActionIcon, Aside, Center, Divider, Grid, Tabs, Title } from '@mantine/core';
+import { ActionIcon, Aside, Button, Center, Divider, Grid, Tabs, Title, UnstyledButton } from '@mantine/core';
+import { useSetState } from '@mantine/hooks';
 import { IconArrowLeft } from '@tabler/icons'
 import { Link } from 'react-router-dom';
 import AvatarTroop from '../AvatarTroop';
 import PendorSidebar from '../PendorSidebar';
 
 export default function TroopTreeSarleon() {
+
+    const [state, setState] = useSetState({ faction: '', name: '' });
+
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
 
@@ -38,7 +42,9 @@ export default function TroopTreeSarleon() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'recruit'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'recruit' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'recruit'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -54,7 +60,9 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'militia'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'militia' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'militia'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -84,7 +92,9 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'trained_militia'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'trained_militia' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'trained_militia'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -92,7 +102,9 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'skirmisher'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'skirmisher' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'skirmisher'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -110,13 +122,17 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'footman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'footman' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'footman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'longbowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'longbowman' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'longbowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -133,13 +149,17 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'armored_footman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'armored_footman' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'armored_footman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'armored_longbowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'armored_longbowman' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'armored_longbowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -173,13 +193,17 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'man_at_arms'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'man_at_arms' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'man_at_arms'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'cavalry'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'cavalry' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'cavalry'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -197,7 +221,9 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'halberdier'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'halberdier' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'halberdier'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -211,7 +237,9 @@ export default function TroopTreeSarleon() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'nobleman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'nobleman' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'nobleman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -225,7 +253,9 @@ export default function TroopTreeSarleon() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'squire_at_arms'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'squire_at_arms' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'squire_at_arms'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -239,7 +269,9 @@ export default function TroopTreeSarleon() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'sarleon'} name={'knight'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'sarleon', name: 'knight' })}>
+                                        <AvatarTroop faction={'sarleon'} name={'knight'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -248,8 +280,8 @@ export default function TroopTreeSarleon() {
                 </Tabs>
             </Grid.Col>
 
-            <PendorSidebar />
-            
+            <PendorSidebar faction={state.faction} name={state.name} />
+
         </Grid >
     );
 }

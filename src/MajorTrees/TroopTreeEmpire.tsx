@@ -1,10 +1,14 @@
-import { ActionIcon, Center, Divider, Grid, Group, Tabs, Title } from '@mantine/core';
+import { ActionIcon, Aside, Button, Center, Divider, Grid, Tabs, Title, UnstyledButton } from '@mantine/core';
+import { useSetState } from '@mantine/hooks';
 import { IconArrowLeft } from '@tabler/icons'
 import { Link } from 'react-router-dom';
 import AvatarTroop from '../AvatarTroop';
-
+import PendorSidebar from '../PendorSidebar';
 
 export default function TroopTreeEmpire() {
+
+    const [state, setState] = useSetState({ faction: '', name: '' });
+
     return (
 
         <Grid grow gutter="sm" justify="center" columns={24} >
@@ -38,7 +42,9 @@ export default function TroopTreeEmpire() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'citizen'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'citizen' })}>
+                                        <AvatarTroop faction={'empire'} name={'citizen'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -54,7 +60,9 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'levy_recruit'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'levy_recruit' })}>
+                                        <AvatarTroop faction={'empire'} name={'levy_recruit'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -84,7 +92,9 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'levy_militia'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'levy_militia' })}>
+                                        <AvatarTroop faction={'empire'} name={'levy_militia'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -92,7 +102,9 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'levy_hunter'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'levy_hunter' })}>
+                                        <AvatarTroop faction={'empire'} name={'levy_hunter'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -135,19 +147,25 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'light_infantry'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'light_infantry' })}>
+                                        <AvatarTroop faction={'empire'} name={'light_infantry'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'levy_skirmisher'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'levy_skirmisher' })}>
+                                        <AvatarTroop faction={'empire'} name={'levy_skirmisher'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'levy_horseman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'levy_horseman' })}>
+                                        <AvatarTroop faction={'empire'} name={'levy_horseman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -201,25 +219,33 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'pikeman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'pikeman' })}>
+                                        <AvatarTroop faction={'empire'} name={'pikeman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'heavy_infantry'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'heavy_infantry' })}>
+                                        <AvatarTroop faction={'empire'} name={'heavy_infantry'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'crossbowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'crossbowman' })}>
+                                        <AvatarTroop faction={'empire'} name={'crossbowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'cavalry'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'cavalry' })}>
+                                        <AvatarTroop faction={'empire'} name={'cavalry'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -243,19 +269,25 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'armored_pikeman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'armored_pikeman' })}>
+                                        <AvatarTroop faction={'empire'} name={'armored_pikeman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'legionnaire'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'legionnaire' })}>
+                                        <AvatarTroop faction={'empire'} name={'legionnaire'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'armored_crossbowman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'armored_crossbowman' })}>
+                                        <AvatarTroop faction={'empire'} name={'armored_crossbowman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -271,7 +303,9 @@ export default function TroopTreeEmpire() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'gladiator'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'gladiator' })}>
+                                        <AvatarTroop faction={'empire'} name={'gladiator'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
@@ -284,7 +318,9 @@ export default function TroopTreeEmpire() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'nobleman'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'nobleman' })}>
+                                        <AvatarTroop faction={'empire'} name={'nobleman'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -298,7 +334,9 @@ export default function TroopTreeEmpire() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'noble_legionnaire_recruit'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'noble_legionnaire_recruit' })}>
+                                        <AvatarTroop faction={'empire'} name={'noble_legionnaire_recruit'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -312,7 +350,9 @@ export default function TroopTreeEmpire() {
                             <Grid.Col span={9}></Grid.Col>
                             <Grid.Col span={6}>
                                 <Center>
-                                    <AvatarTroop faction={'empire'} name={'knight'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => setState({ faction: 'empire', name: 'knight' })}>
+                                        <AvatarTroop faction={'empire'} name={'knight'}></AvatarTroop>
+                                    </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={9}></Grid.Col>
@@ -321,6 +361,9 @@ export default function TroopTreeEmpire() {
                     </Tabs.Panel>
                 </Tabs>
             </Grid.Col>
+
+            <PendorSidebar faction={state.faction} name={state.name} />
+
         </Grid>
     );
 }

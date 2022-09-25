@@ -46,10 +46,10 @@ export default function AvatarTroop(props: TroopProps) {
                     }}
                     sx={(theme) => ({
 
-                        '&:hover': {
-                            backgroundColor: `${theme.colors.dark[6]}`
-                        },
-                        cursor: 'pointer'
+                        // '&:hover': {
+                        //     backgroundColor: `${theme.colors.dark[6]}`
+                        // },
+                        // cursor: 'pointer'
 
                     })}
                 />

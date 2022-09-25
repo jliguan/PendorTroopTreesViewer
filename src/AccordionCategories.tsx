@@ -26,14 +26,14 @@ export default function AccordionCategories() {
             </Accordion.Item>
 
             <Accordion.Item value="MinorFactions">
-                <Accordion.Control>Minor Factions</Accordion.Control>
+                <Accordion.Control disabled>Minor Factions</Accordion.Control>
                 <Accordion.Panel>
                     <MinorGrid />
                 </Accordion.Panel>
             </Accordion.Item>
 
             <Accordion.Item value="KOFactions">
-                <Accordion.Control>Knighthood Orders</Accordion.Control>
+                <Accordion.Control disabled>Knighthood Orders</Accordion.Control>
                 <Accordion.Panel>
                     <KOGrid />
                 </Accordion.Panel>
