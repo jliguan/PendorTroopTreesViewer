@@ -1,5 +1,4 @@
-import { Aside, Center, MediaQuery, ScrollArea, Stack, Text, Image, createStyles, Group, Table, Container, Skeleton } from '@mantine/core';
-import { useState } from 'react';
+import { Aside, Center, MediaQuery, ScrollArea, Stack, Text, Image, createStyles, Group, Table, Container } from '@mantine/core';
 import TroopData from './TroopData.json';
 
 interface TroopProps {
@@ -21,8 +20,9 @@ export default function PendorSidebar(props: TroopProps) {
 
     if (props.faction === "" || props.name === "") {
         return (
-            <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
+            <MediaQuery smallerThan={1000} styles={{ display: 'none' }}>
+                <Aside width={{ sm: 300, lg: 300 }}>
+                    <Text>a</Text>
                 </Aside>
             </MediaQuery>
         );
@@ -34,28 +34,30 @@ export default function PendorSidebar(props: TroopProps) {
         const category: string = (TroopData as any)[props.faction][props.name]["type"];
 
         return (
-            <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}>
+            <MediaQuery smallerThan={1000} styles={{ display: 'none' }}>
+
+                {/* <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }} style={{ zIndex: 0 }}> */}
+                <Aside p="md" hiddenBreakpoint={1000} hidden width={{ sm: 300, lg: 300 }} style={{ zIndex: 0 }}>
                     <ScrollArea offsetScrollbars type="never">
                         {/* {(TroopData as any)[props.faction][props.name]["name"]} */}
                         <Stack justify="flex-start" spacing="xs">
                             <Center>
-                                <Text>
+                                <Text size="lg" weight={600} align="center">
                                     {(TroopData as any)[props.faction][props.name]["name"]}
                                 </Text>
                             </Center>
 
                             <Group position="left" spacing="xs">
-                                    <Image
-                                        radius="xs"
-                                        src={dir}
-                                        alt={(TroopData as any)[props.faction][props.name]["name"]}
-                                        fit="cover"
-                                        width={110}
-                                        height={250}
-                                        classNames={{
-                                            image: category.includes("Cavalry") ? classes.horseview : classes.sideview
-                                        }}
+                                <Image
+                                    radius="xs"
+                                    src={dir}
+                                    alt={(TroopData as any)[props.faction][props.name]["name"]}
+                                    fit="cover"
+                                    width={110}
+                                    height={250}
+                                    classNames={{
+                                        image: category.includes("Cavalry") ? classes.horseview : classes.sideview
+                                    }}
                                     />
                                 <Stack justify="flex-start" spacing="xs">
                                     <Container m={0} pl={10}>
@@ -66,33 +68,30 @@ export default function PendorSidebar(props: TroopProps) {
                                     </Container>
 
 
-                                    <Table verticalSpacing={3} highlightOnHover fontSize="md">
+                                    <Table verticalSpacing={3} highlightOnHover fontSize="sm">
                                         <thead>
                                             <tr>
                                                 <th>
                                                     Attributes
-                                                </th>
-                                                <th>
-
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>STR</td>
-                                                <td>{(TroopData as any)[props.faction][props.name]["str"]}</td>
+                                                <td align='right'>{(TroopData as any)[props.faction][props.name]["str"]}</td>
                                             </tr>
                                             <tr>
                                                 <td>AGI</td>
-                                                <td>{(TroopData as any)[props.faction][props.name]["agi"]}</td>
+                                                <td align='right'>{(TroopData as any)[props.faction][props.name]["agi"]}</td>
                                             </tr>
                                             <tr>
                                                 <td>INT</td>
-                                                <td>{(TroopData as any)[props.faction][props.name]["int"]}</td>
+                                                <td align='right'>{(TroopData as any)[props.faction][props.name]["int"]}</td>
                                             </tr>
                                             <tr>
                                                 <td>CHA</td>
-                                                <td>{(TroopData as any)[props.faction][props.name]["cha"]}</td>
+                                                <td align='right'>{(TroopData as any)[props.faction][props.name]["cha"]}</td>
                                             </tr>
                                         </tbody>
                                     </Table>
@@ -101,7 +100,7 @@ export default function PendorSidebar(props: TroopProps) {
 
 
 
-                            <Table verticalSpacing={3} highlightOnHover fontSize="md">
+                            <Table verticalSpacing={3} highlightOnHover fontSize="sm">
                                 <thead>
                                     <tr>
                                         <th>
@@ -115,40 +114,40 @@ export default function PendorSidebar(props: TroopProps) {
                                 <tbody>
                                     <tr>
                                         <td>Ironflesh</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["ironflesh"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["ironflesh"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Power Strike</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["power_strike"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["power_strike"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Power Throw</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["power_throw"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["power_throw"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Power Draw</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["power_draw"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["power_draw"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Shield</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["shield"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["shield"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Athletics</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["athletics"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["athletics"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Riding</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["riding"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["riding"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Horse Archery</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["horse_archery"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["horse_archery"]}</td>
                                     </tr>
                                 </tbody>
                             </Table>
 
-                            <Table verticalSpacing={3} highlightOnHover fontSize="md">
+                            <Table verticalSpacing={3} highlightOnHover fontSize="sm">
                                 <thead>
                                     <tr>
                                         <th>
@@ -162,27 +161,27 @@ export default function PendorSidebar(props: TroopProps) {
                                 <tbody>
                                     <tr>
                                         <td>1H Weapons</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["one_handed"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["one_handed"]}</td>
                                     </tr>
                                     <tr>
                                         <td>2H Weapons</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["two_handed"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["two_handed"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Polearms</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["polearms"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["polearms"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Archery</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["archery"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["archery"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Crossbows</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["crossbows"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["crossbows"]}</td>
                                     </tr>
                                     <tr>
                                         <td>Throwing</td>
-                                        <td>{(TroopData as any)[props.faction][props.name]["throwing"]}</td>
+                                        <td align='right'>{(TroopData as any)[props.faction][props.name]["throwing"]}</td>
                                     </tr>
                                 </tbody>
                             </Table>

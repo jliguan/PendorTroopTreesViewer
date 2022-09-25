@@ -11,7 +11,7 @@ export default function PendorNavbar() {
 
   const location = useLocation();
   const { classes } = useStyles();
-  
+
   return (
     <ScrollArea offsetScrollbars type="never">
       <NavLink

@@ -11,8 +11,10 @@ import {
   Autocomplete,
   Grid,
   Container,
-  Aside,
-  Text
+  Group,
+  Tooltip,
+  ActionIcon,
+  CopyButton
 } from '@mantine/core';
 import AccordionCategories from './AccordionCategories';
 import PendorNavbar from './PendorNavbar';
@@ -22,13 +24,13 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons'
 import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
 import TroopTreeRavenstern from './MajorTrees/TroopTreeRavenstern';
 import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
 import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
 import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
 import TroopTreePendor from './MajorTrees/TroopTreePendor';
-import PendorSidebar from './PendorSidebar';
 
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
@@ -44,12 +46,29 @@ export default function PendorTroopsAppShell() {
           },
         }}
         navbarOffsetBreakpoint="sm"
-        asideOffsetBreakpoint="sm"
+        asideOffsetBreakpoint={1000}
         navbar={
-          <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 200 }}>
+          <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 200 }} sx={{ flexDirection: "column", justifyContent: "space-between" }}>
             <PendorNavbar />
-          </Navbar>
 
+            <Group position="center" sx={{ borderTop: "1px solid grey", paddingTop: "10px" }}>
+              <CopyButton value="yd#3241" timeout={1500}>
+                {({ copied, copy }) => (
+                  <Tooltip label={copied ? 'Copied' : 'Contact me: yd#3241'}>
+                    <ActionIcon size="xl" color="#7289d9" variant="filled" onClick={copy}>
+                      <IconBrandDiscord />
+                    </ActionIcon>
+                  </Tooltip>
+                )}
+              </CopyButton>
+
+              <Tooltip label="Github">
+                <ActionIcon size="xl" color="white" variant="outline" component="a" href="https://github.com/jliguan/PendorTroopTreesViewer" target="_blank">
+                  <IconBrandGithub />
+                </ActionIcon>
+              </Tooltip>
+            </Group>
+          </Navbar>
         }
         // aside={
         //   <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
@@ -74,14 +93,27 @@ export default function PendorTroopsAppShell() {
                   />
                 </MediaQuery>
 
-                <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline p={5}
-                  sx={{
-                    '&:hover': {
-                      backgroundColor: `${theme.colors.dark[6]}`,
-                    }
-                  }}>
-                  Pendor Troop Tree Viewer
-                </Anchor>
+                <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
+                  <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="xl" inline p={5}
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: `${theme.colors.dark[6]}`,
+                      }
+                    }}>
+                    Pendor Troop Tree Viewer
+                  </Anchor>
+                </MediaQuery>
+                <MediaQuery largerThan={480} styles={{ display: 'none' }}>
+                  <Anchor component={Link} variant="link" to="/" style={{ textDecoration: 'none' }} size="lg" inline p={5}
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: `${theme.colors.dark[6]}`,
+                      }
+                    }}>
+                    Pendor Troop Tree Viewer
+                  </Anchor>
+                </MediaQuery>
+
 
               </Grid.Col>
 
@@ -167,7 +199,7 @@ export default function PendorTroopsAppShell() {
               <Route path="/MajorTrees/Pendor" element={<TroopTreePendor />} />
             </Routes>
           </ScrollArea>
-          
+
         </Container>
 
         {/* </ScrollArea.Autosize> */}

@@ -1,4 +1,4 @@
-import { ActionIcon, Aside, Button, Center, Divider, Grid, Tabs, Title, UnstyledButton } from '@mantine/core';
+import { ActionIcon, Center, Divider, Grid, MediaQuery, Tabs, Title, UnstyledButton } from '@mantine/core';
 import { useSetState } from '@mantine/hooks';
 import { IconArrowLeft } from '@tabler/icons'
 import { Link } from 'react-router-dom';
@@ -19,7 +19,12 @@ export default function TroopTreeEmpire() {
             </Grid.Col>
             <Grid.Col span={8}>
                 <Center>
-                    <Title order={1}>Empire</Title>
+                    <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
+                        <Title order={1}>Empire</Title>
+                    </MediaQuery>
+                    <MediaQuery largerThan={480} styles={{ display: 'none' }}>
+                        <Title order={2}>Empire</Title>
+                    </MediaQuery>
                 </Center>
 
             </Grid.Col>
