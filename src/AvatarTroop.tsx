@@ -3,7 +3,8 @@ import { useState } from 'react';
 import TroopData from './TroopData.json';
 
 interface TroopProps {
-    faction: 'sarleon' | 'dshar' | 'pendor' | 'ravenstern' | 'fierdsvain' | 'empire',
+    // faction: 'sarleon' | 'dshar' | 'pendor' | 'ravenstern' | 'fierdsvain' | 'empire',
+    faction: string,
     name: string
 }
 

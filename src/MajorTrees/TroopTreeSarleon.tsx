@@ -31,10 +31,10 @@ export default function TroopTreeSarleon() {
             <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>Sarleon</Title>
+                        <Title order={1} align="center">Sarleon</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={2}>Sarleon</Title>
+                        <Title order={2} align="center">Sarleon</Title>
                     </MediaQuery>
                 </Center>
             </Grid.Col>

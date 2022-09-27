@@ -31,10 +31,10 @@ export default function TroopTreeRavenstern() {
             <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>Ravenstern</Title>
+                        <Title order={1} align="center">Ravenstern</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={3}>Ravenstern</Title>
+                        <Title order={3} align="center">Ravenstern</Title>
                     </MediaQuery>
                 </Center>
 

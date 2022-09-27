@@ -30,15 +30,15 @@ export default function PendorNavbar() {
         label="Minor Factions"
         childrenOffset={28}
         // opened={location.pathname.includes("MinorTrees")}
-        disabled
+        // disabled
       >
-        <NavLink label="Heretics" classNames={classes} />
-        <NavLink label="Jatu" classNames={classes} />
-        <NavLink label="Mystmountain Raiders" classNames={classes} />
-        <NavLink label="Snake Cult" classNames={classes} />
-        <NavLink label="Noldor" classNames={classes} />
-        <NavLink label="Vanskerries" classNames={classes} />
-        <NavLink label="Red Brotherhood" classNames={classes} />
+        <NavLink label="Heretics" component={Link} to="/MinorTrees/Heretics" active={location.pathname === '/MinorTrees/Heretics'} classNames={classes} />
+        <NavLink label="Jatu" component={Link} to="/MinorTrees/Jatu" active={location.pathname === '/MinorTrees/Jatu'} classNames={classes} />
+        <NavLink label="Mystmountain Raiders" component={Link} to="/MinorTrees/MystmountainRaiders" active={location.pathname === '/MinorTrees/MystmountainRaiders'} classNames={classes} />
+        <NavLink label="Snake Cult" component={Link} to="/MinorTrees/SnakeCult" active={location.pathname === '/MinorTrees/SnakeCult'} classNames={classes} />
+        <NavLink label="Noldor" component={Link} to="/MinorTrees/Noldor" active={location.pathname === '/MinorTrees/Noldor'} classNames={classes} />
+        <NavLink label="Vanskerries" component={Link} to="/MinorTrees/Vanskerries" active={location.pathname === '/MinorTrees/Vanskerries'} classNames={classes} />
+        <NavLink label="Red Brotherhood" component={Link} to="/MinorTrees/RedBrotherhood" active={location.pathname === '/MinorTrees/RedBrotherhood'} classNames={classes} />
         <NavLink label="Forest Bandits" classNames={classes} />
         <NavLink label="Outlaws" classNames={classes} />
         <NavLink label="Rogue Knights" classNames={classes} />
@@ -55,7 +55,7 @@ export default function PendorNavbar() {
         label="Knighthood Orders"
         childrenOffset={28}
         // opened={location.pathname.includes("KOTrees")}
-        disabled
+        // disabled
       >
         <NavLink label="Order of the Lion" classNames={classes} />
         <NavLink label="Order of the Dragon" classNames={classes} />

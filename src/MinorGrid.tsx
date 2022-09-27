@@ -2,7 +2,7 @@ import { Button, Grid } from '@mantine/core';
 import { Link } from 'react-router-dom';
 
 const MinorData = [
-    { name: "Heretics", linkTo: "/MajorTrees/Sarleon" },
+    { name: "Heretics", linkTo: "/MinorTrees/Heretics" },
     { name: "Jatu", linkTo: "/MajorTrees/Sarleon" },
     { name: "Mystmountain Raiders", linkTo: "/MajorTrees/Sarleon" },
     { name: "Snake Cult", linkTo: "/MajorTrees/Sarleon" },

@@ -31,10 +31,10 @@ export default function TroopTreeDShar() {
             <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>D'Shar</Title>
+                        <Title order={1} align="center">D'Shar</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={3}>D'Shar</Title>
+                        <Title order={3} align="center">D'Shar</Title>
                     </MediaQuery>
                 </Center>
 

@@ -31,6 +31,13 @@ import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
 import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
 import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
 import TroopTreePendor from './MajorTrees/TroopTreePendor';
+import Heretics from './MinorTrees/Heretics';
+import Jatu from './MinorTrees/Jatu';
+import MystmountainRaiders from './MinorTrees/MystmountainRaiders';
+import SnakeCult from './MinorTrees/SnakeCult';
+import Noldor from './MinorTrees/Noldor';
+import Vanskerries from './MinorTrees/Vanskerries';
+import RedBrotherhood from './MinorTrees/RedBrotherhood';
 
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
@@ -197,6 +204,14 @@ export default function PendorTroopsAppShell() {
               <Route path="/MajorTrees/Empire" element={<TroopTreeEmpire />} />
               <Route path="/MajorTrees/DShar" element={<TroopTreeDShar />} />
               <Route path="/MajorTrees/Pendor" element={<TroopTreePendor />} />
+
+              <Route path="/MinorTrees/Heretics" element={<Heretics />} />
+              <Route path="/MinorTrees/Jatu" element={<Jatu />} />
+              <Route path="/MinorTrees/MystmountainRaiders" element={<MystmountainRaiders />} />
+              <Route path="/MinorTrees/SnakeCult" element={<SnakeCult />} />
+              <Route path="/MinorTrees/Noldor" element={<Noldor />} />
+              <Route path="/MinorTrees/Vanskerries" element={<Vanskerries />} />
+              <Route path="/MinorTrees/RedBrotherhood" element={<RedBrotherhood />} />
             </Routes>
           </ScrollArea>
 

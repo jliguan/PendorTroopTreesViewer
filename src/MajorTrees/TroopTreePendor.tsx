@@ -31,10 +31,10 @@ export default function TroopTreePendor() {
             <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>Pendor</Title>
+                        <Title order={1} align="center">Pendor</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={3}>Pendor</Title>
+                        <Title order={3} align="center">Pendor</Title>
                     </MediaQuery>
                 </Center>
 

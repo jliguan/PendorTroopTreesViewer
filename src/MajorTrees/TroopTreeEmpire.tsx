@@ -31,10 +31,10 @@ export default function TroopTreeEmpire() {
             <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>Empire</Title>
+                        <Title order={1} align="center">Empire</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={2}>Empire</Title>
+                        <Title order={2} align="center">Empire</Title>
                     </MediaQuery>
                 </Center>
 

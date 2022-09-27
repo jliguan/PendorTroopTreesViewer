@@ -31,10 +31,10 @@ export default function TroopTreeFierdsvain() {
             <Grid.Col span={12}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>Fierdsvain</Title>
+                        <Title order={1} align="center">Fierdsvain</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={2}>Fierdsvain</Title>
+                        <Title order={2} align="center">Fierdsvain</Title>
                     </MediaQuery>
                 </Center>
 
