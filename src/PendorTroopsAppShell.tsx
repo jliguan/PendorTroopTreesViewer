@@ -56,7 +56,7 @@ export default function PendorTroopsAppShell() {
         asideOffsetBreakpoint={1000}
         navbar={
           <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 200 }} sx={{ flexDirection: "column", justifyContent: "space-between" }}>
-            <PendorNavbar />
+            <PendorNavbar onChange={setOpened} />
 
             <Group position="center" sx={{ borderTop: "1px solid grey", paddingTop: "10px" }}>
               <CopyButton value="yd#3241" timeout={1500}>

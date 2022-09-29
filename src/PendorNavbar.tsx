@@ -7,7 +7,15 @@ const useStyles = createStyles((theme) => ({
   }
 }));
 
-export default function PendorNavbar() {
+interface propFunc {
+  onChange: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function PendorNavbar(props: propFunc) {
+
+  function handleChange(event: any) {
+    props.onChange(event.target.value)
+  }
 
   const location = useLocation();
   const { classes } = useStyles();
@@ -18,19 +26,19 @@ export default function PendorNavbar() {
         label="Major Factions"
         childrenOffset={28}
       >
-        <NavLink label="Sarleon" component={Link} to="/MajorTrees/Sarleon" active={location.pathname === '/MajorTrees/Sarleon'} classNames={classes} />
-        <NavLink label="Ravenstern" component={Link} to="/MajorTrees/Ravenstern" active={location.pathname === '/MajorTrees/Ravenstern'} classNames={classes} />
-        <NavLink label="Fierdsvain" component={Link} to="/MajorTrees/Fierdsvain" active={location.pathname === '/MajorTrees/Fierdsvain'} classNames={classes} />
-        <NavLink label="Empire" component={Link} to="/MajorTrees/Empire" active={location.pathname === '/MajorTrees/Empire'} classNames={classes} />
-        <NavLink label="D'Shar" component={Link} to="/MajorTrees/DShar" active={location.pathname === '/MajorTrees/DShar'} classNames={classes} />
-        <NavLink label="Pendor" component={Link} to="/MajorTrees/Pendor" active={location.pathname === '/MajorTrees/Pendor'} classNames={classes} />
+        <NavLink label="Sarleon" component={Link} to="/MajorTrees/Sarleon" active={location.pathname === '/MajorTrees/Sarleon'} classNames={classes} onClick={handleChange} />
+        <NavLink label="Ravenstern" component={Link} to="/MajorTrees/Ravenstern" active={location.pathname === '/MajorTrees/Ravenstern'} classNames={classes} onClick={handleChange}/>
+        <NavLink label="Fierdsvain" component={Link} to="/MajorTrees/Fierdsvain" active={location.pathname === '/MajorTrees/Fierdsvain'} classNames={classes} onClick={handleChange}/>
+        <NavLink label="Empire" component={Link} to="/MajorTrees/Empire" active={location.pathname === '/MajorTrees/Empire'} classNames={classes} onClick={handleChange}/>
+        <NavLink label="D'Shar" component={Link} to="/MajorTrees/DShar" active={location.pathname === '/MajorTrees/DShar'} classNames={classes} onClick={handleChange}/>
+        <NavLink label="Pendor" component={Link} to="/MajorTrees/Pendor" active={location.pathname === '/MajorTrees/Pendor'} classNames={classes} onClick={handleChange}/>
       </NavLink>
 
       <NavLink
         label="Minor Factions"
         childrenOffset={28}
-        // opened={location.pathname.includes("MinorTrees")}
-        // disabled
+      // opened={location.pathname.includes("MinorTrees")}
+      // disabled
       >
         <NavLink label="Heretics" component={Link} to="/MinorTrees/Heretics" active={location.pathname === '/MinorTrees/Heretics'} classNames={classes} />
         <NavLink label="Jatu" component={Link} to="/MinorTrees/Jatu" active={location.pathname === '/MinorTrees/Jatu'} classNames={classes} />
@@ -54,8 +62,8 @@ export default function PendorNavbar() {
       <NavLink
         label="Knighthood Orders"
         childrenOffset={28}
-        // opened={location.pathname.includes("KOTrees")}
-        // disabled
+      // opened={location.pathname.includes("KOTrees")}
+      // disabled
       >
         <NavLink label="Order of the Lion" classNames={classes} />
         <NavLink label="Order of the Dragon" classNames={classes} />
