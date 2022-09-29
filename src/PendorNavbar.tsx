@@ -7,11 +7,11 @@ const useStyles = createStyles((theme) => ({
   }
 }));
 
-interface propFunc {
+interface PropFunc {
   onChange: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function PendorNavbar(props: propFunc) {
+export default function PendorNavbar(props: PropFunc) {
 
   function handleChange(event: any) {
     props.onChange(event.target.value)
@@ -50,9 +50,11 @@ export default function PendorNavbar(props: propFunc) {
         <NavLink label="Forest Bandits" classNames={classes} />
         <NavLink label="Outlaws" classNames={classes} />
         <NavLink label="Rogue Knights" classNames={classes} />
+        <NavLink label="Adventurer Companies" classNames={classes} />
         <NavLink label="Barclay" classNames={classes} />
         <NavLink label="Mettenheim" classNames={classes} />
         <NavLink label="Veccavia" classNames={classes} />
+        <NavLink label="Singalians" classNames={classes} />
         <NavLink label="Melitine Empire" classNames={classes} />
         <NavLink label="Mercenaries" classNames={classes} />
         <NavLink label="Rebel Peasants" classNames={classes} />

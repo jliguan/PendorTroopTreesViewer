@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { lazy, useState } from 'react';
 import {
   AppShell,
   Navbar,
@@ -25,7 +25,8 @@ import {
   Routes,
 } from "react-router-dom";
 import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons'
-import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
+// import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
+const TroopTreeSarleon = lazy(() => import('./MajorTrees/TroopTreeSarleon'));
 import TroopTreeRavenstern from './MajorTrees/TroopTreeRavenstern';
 import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
 import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
@@ -198,7 +199,11 @@ export default function PendorTroopsAppShell() {
           <ScrollArea style={{ height: '95%' }} type="hover" offsetScrollbars scrollbarSize={8}>
             <Routes>
               <Route path="/" element={<AccordionCategories />} />
-              <Route path="/MajorTrees/Sarleon" element={<TroopTreeSarleon />} />
+              <Route path="/MajorTrees/Sarleon" element={
+                <React.Suspense fallback={<>...</>}>
+                  <TroopTreeSarleon />
+                </React.Suspense>
+              } />
               <Route path="/MajorTrees/Ravenstern" element={<TroopTreeRavenstern />} />
               <Route path="/MajorTrees/Fierdsvain" element={<TroopTreeFierdsvain />} />
               <Route path="/MajorTrees/Empire" element={<TroopTreeEmpire />} />
