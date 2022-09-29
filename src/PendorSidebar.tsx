@@ -17,7 +17,6 @@ const useStyles = createStyles(() => ({
 
 export default function PendorSidebar(props: TroopProps) {
 
-
     if (props.faction === "" || props.name === "") {
         return (
             <MediaQuery smallerThan={1000} styles={{ display: 'none' }}>
@@ -57,7 +56,7 @@ export default function PendorSidebar(props: TroopProps) {
                                     classNames={{
                                         image: category.includes("Cavalry") ? classes.horseview : classes.sideview
                                     }}
-                                    />
+                                />
                                 <Stack justify="flex-start" spacing="xs">
                                     <Container m={0} pl={10}>
                                         <Text size="md">Level: {(TroopData as any)[props.faction][props.name]["level"]}</Text>
@@ -184,6 +183,12 @@ export default function PendorSidebar(props: TroopProps) {
                                         <td>Throwing</td>
                                         <td align='right'>{(TroopData as any)[props.faction][props.name]["throwing"]}</td>
                                     </tr>
+                                    {props.faction == "barclay" &&
+                                        <tr>
+                                            <td>Firearms</td>
+                                            <td align='right'>{(TroopData as any)[props.faction][props.name]["firearms"]}</td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </Table>
 

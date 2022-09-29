@@ -26,19 +26,31 @@ import {
 } from "react-router-dom";
 import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons'
 // import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
+// import TroopTreeRavenstern from './MajorTrees/TroopTreeRavenstern';
+// import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
+// import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
+// import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
+// import TroopTreePendor from './MajorTrees/TroopTreePendor';
+// import Heretics from './MinorTrees/Heretics';
+// import Jatu from './MinorTrees/Jatu';
+// import MystmountainRaiders from './MinorTrees/MystmountainRaiders';
+// import SnakeCult from './MinorTrees/SnakeCult';
+// import Noldor from './MinorTrees/Noldor';
+// import Vanskerries from './MinorTrees/Vanskerries';
+// import RedBrotherhood from './MinorTrees/RedBrotherhood';
 const TroopTreeSarleon = lazy(() => import('./MajorTrees/TroopTreeSarleon'));
-import TroopTreeRavenstern from './MajorTrees/TroopTreeRavenstern';
-import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
-import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
-import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
-import TroopTreePendor from './MajorTrees/TroopTreePendor';
-import Heretics from './MinorTrees/Heretics';
-import Jatu from './MinorTrees/Jatu';
-import MystmountainRaiders from './MinorTrees/MystmountainRaiders';
-import SnakeCult from './MinorTrees/SnakeCult';
-import Noldor from './MinorTrees/Noldor';
-import Vanskerries from './MinorTrees/Vanskerries';
-import RedBrotherhood from './MinorTrees/RedBrotherhood';
+const TroopTreeRavenstern = lazy(() => import('./MajorTrees/TroopTreeRavenstern'));
+const TroopTreeFierdsvain = lazy(() => import('./MajorTrees/TroopTreeFierdsvain'));
+const TroopTreeEmpire = lazy(() => import('./MajorTrees/TroopTreeEmpire'));
+const TroopTreeDShar = lazy(() => import('./MajorTrees/TroopTreeDShar'));
+const TroopTreePendor = lazy(() => import('./MajorTrees/TroopTreePendor'));
+const Heretics = lazy(() => import('./MinorTrees/Heretics'));
+const Jatu = lazy(() => import('./MinorTrees/Jatu'));
+const MystmountainRaiders = lazy(() => import('./MinorTrees/MystmountainRaiders'));
+const SnakeCult = lazy(() => import('./MinorTrees/SnakeCult'));
+const Noldor = lazy(() => import('./MinorTrees/Noldor'));
+const Vanskerries = lazy(() => import('./MinorTrees/Vanskerries'));
+const RedBrotherhood = lazy(() => import('./MinorTrees/RedBrotherhood'));
 
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
@@ -202,6 +214,61 @@ export default function PendorTroopsAppShell() {
               <Route path="/MajorTrees/Sarleon" element={
                 <React.Suspense fallback={<>...</>}>
                   <TroopTreeSarleon />
+                </React.Suspense>
+              } />
+              <Route path="/MajorTrees/Ravenstern" element={
+                <React.Suspense fallback={<>...</>}>
+                  <TroopTreeRavenstern />
+                </React.Suspense>
+              } />
+              <Route path="/MajorTrees/Fierdsvain" element={
+                <React.Suspense fallback={<>...</>}>
+                  <TroopTreeFierdsvain />
+                </React.Suspense>
+              } />
+              <Route path="/MajorTrees/DShar" element={
+                <React.Suspense fallback={<>...</>}>
+                  <TroopTreeDShar />
+                </React.Suspense>
+              } />
+              <Route path="/MajorTrees/Pendor" element={
+                <React.Suspense fallback={<>...</>}>
+                  <TroopTreeDShar />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/Heretics" element={
+                <React.Suspense fallback={<>...</>}>
+                  <Heretics />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/Jatu" element={
+                <React.Suspense fallback={<>...</>}>
+                  <Jatu />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/MystmountainRaiders" element={
+                <React.Suspense fallback={<>...</>}>
+                  <MystmountainRaiders />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/SnakeCult" element={
+                <React.Suspense fallback={<>...</>}>
+                  <SnakeCult />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/Noldor" element={
+                <React.Suspense fallback={<>...</>}>
+                  <Noldor />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/Vanskerries" element={
+                <React.Suspense fallback={<>...</>}>
+                  <Vanskerries />
+                </React.Suspense>
+              } />
+              <Route path="/MinorTrees/RedBrotherhood" element={
+                <React.Suspense fallback={<>...</>}>
+                  <RedBrotherhood />
                 </React.Suspense>
               } />
               <Route path="/MajorTrees/Ravenstern" element={<TroopTreeRavenstern />} />
