@@ -3,22 +3,24 @@ import { Link } from 'react-router-dom';
 
 const MinorData = [
     { name: "Heretics", linkTo: "/MinorTrees/Heretics" },
-    { name: "Jatu", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Mystmountain Raiders", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Snake Cult", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Noldor", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Vanskerries", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Red Brotherhood", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Forest Bandits", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Outlaws", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Rogue Knights", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Barclay", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Mettenheim", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Veccavia", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Melitine Empire", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Mercenaries", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Rebel Peasants", linkTo: "/MajorTrees/Sarleon" },
-    { name: "Inquisition", linkTo: "/MajorTrees/Sarleon" }
+    { name: "Jatu", linkTo: "/MinorTrees/Jatu" },
+    { name: "Mystmountain Raiders", linkTo: "/MinorTrees/MystmountainRaiders" },
+    { name: "Snake Cult", linkTo: "/MinorTrees/SnakeCult" },
+    { name: "Noldor", linkTo: "/MinorTrees/Noldor" },
+    { name: "Vanskerries", linkTo: "/MinorTrees/Vanskerries" },
+    { name: "Red Brotherhood", linkTo: "/MinorTrees/RedBrotherhood" },
+    { name: "Forest Bandits", linkTo: "/MinorTrees/ForestBandits" },
+    { name: "Outlaws", linkTo: "/MinorTrees/Outlaws" },
+    { name: "Rogue Knights", linkTo: "/MinorTrees/RogueKnights" },
+    { name: "Adventurer Companies", linkTo: "/MinorTrees/AdventurerCompanies" },
+    { name: "Barclay", linkTo: "/MinorTrees/Barclay" },
+    { name: "Mettenheim", linkTo: "/MinorTrees/Mettenheim" },
+    { name: "Veccavia", linkTo: "/MinorTrees/Veccavia" },
+    { name: "Singalians", linkTo: "/MinorTrees/Singalians" },
+    { name: "Melitine Empire", linkTo: "/MinorTrees/MelitineEmpire" },
+    { name: "Mercenaries", linkTo: "/MinorTrees/Mercenaries" },
+    { name: "Rebel Peasants", linkTo: "/MinorTrees/RebelPeasants" },
+    { name: "Inquisition", linkTo: "/MinorTrees/Inquisition" }
 ];
 
 export default function MinorGrid() {

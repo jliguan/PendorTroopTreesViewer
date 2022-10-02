@@ -26,6 +26,7 @@ export default function PendorNavbar(props: PropFunc) {
         label="Major Factions"
         childrenOffset={28}
       >
+        {/* TODO: MAP THIS SECTION */}
         <NavLink label="Sarleon" component={Link} to="/MajorTrees/Sarleon" active={location.pathname === '/MajorTrees/Sarleon'} classNames={classes} onClick={handleChange} />
         <NavLink label="Ravenstern" component={Link} to="/MajorTrees/Ravenstern" active={location.pathname === '/MajorTrees/Ravenstern'} classNames={classes} onClick={handleChange}/>
         <NavLink label="Fierdsvain" component={Link} to="/MajorTrees/Fierdsvain" active={location.pathname === '/MajorTrees/Fierdsvain'} classNames={classes} onClick={handleChange}/>
@@ -40,6 +41,7 @@ export default function PendorNavbar(props: PropFunc) {
       // opened={location.pathname.includes("MinorTrees")}
       // disabled
       >
+        {/* TODO: MAP THIS SECTION */}
         <NavLink label="Heretics" component={Link} to="/MinorTrees/Heretics" active={location.pathname === '/MinorTrees/Heretics'} classNames={classes} />
         <NavLink label="Jatu" component={Link} to="/MinorTrees/Jatu" active={location.pathname === '/MinorTrees/Jatu'} classNames={classes} />
         <NavLink label="Mystmountain Raiders" component={Link} to="/MinorTrees/MystmountainRaiders" active={location.pathname === '/MinorTrees/MystmountainRaiders'} classNames={classes} />
@@ -47,18 +49,18 @@ export default function PendorNavbar(props: PropFunc) {
         <NavLink label="Noldor" component={Link} to="/MinorTrees/Noldor" active={location.pathname === '/MinorTrees/Noldor'} classNames={classes} />
         <NavLink label="Vanskerries" component={Link} to="/MinorTrees/Vanskerries" active={location.pathname === '/MinorTrees/Vanskerries'} classNames={classes} />
         <NavLink label="Red Brotherhood" component={Link} to="/MinorTrees/RedBrotherhood" active={location.pathname === '/MinorTrees/RedBrotherhood'} classNames={classes} />
-        <NavLink label="Forest Bandits" classNames={classes} />
-        <NavLink label="Outlaws" classNames={classes} />
-        <NavLink label="Rogue Knights" classNames={classes} />
-        <NavLink label="Adventurer Companies" classNames={classes} />
-        <NavLink label="Barclay" classNames={classes} />
-        <NavLink label="Mettenheim" classNames={classes} />
-        <NavLink label="Veccavia" classNames={classes} />
-        <NavLink label="Singalians" classNames={classes} />
-        <NavLink label="Melitine Empire" classNames={classes} />
-        <NavLink label="Mercenaries" classNames={classes} />
-        <NavLink label="Rebel Peasants" classNames={classes} />
-        <NavLink label="Inquisition" classNames={classes} />
+        <NavLink label="Forest Bandits" component={Link} to="/MinorTrees/ForestBandits" active={location.pathname === '/MinorTrees/ForestBandits'} classNames={classes} />
+        <NavLink label="Outlaws" component={Link} to="/MinorTrees/Outlaws" active={location.pathname === '/MinorTrees/Outlaws'} classNames={classes} />
+        <NavLink label="Rogue Knights" component={Link} to="/MinorTrees/RogueKnights" active={location.pathname === '/MinorTrees/RogueKnights'} classNames={classes} />
+        <NavLink label="Adventurer Companies" component={Link} to="/MinorTrees/AdventurerCompanies" active={location.pathname === '/MinorTrees/AdventurerCompanies'} classNames={classes} />
+        <NavLink label="Barclay" component={Link} to="/MinorTrees/Barclay" active={location.pathname === '/MinorTrees/Barclay'} classNames={classes} />
+        <NavLink label="Mettenheim" component={Link} to="/MinorTrees/Mettenheim" active={location.pathname === '/MinorTrees/Mettenheim'} classNames={classes} />
+        <NavLink label="Veccavia" component={Link} to="/MinorTrees/Veccavia" active={location.pathname === '/MinorTrees/Veccavia'} classNames={classes} />
+        <NavLink label="Singalians" component={Link} to="/MinorTrees/Singalians" active={location.pathname === '/MinorTrees/Singalians'} classNames={classes} />
+        <NavLink label="Melitine Empire" component={Link} to="/MinorTrees/MelitineEmpire" active={location.pathname === '/MinorTrees/MelitineEmpire'} classNames={classes} />
+        <NavLink label="Mercenaries" component={Link} to="/MinorTrees/Mercenaries" active={location.pathname === '/MinorTrees/Mercenaries'} classNames={classes} />
+        <NavLink label="Rebel Peasants" component={Link} to="/MinorTrees/RebelPeasants" active={location.pathname === '/MinorTrees/RebelPeasants'} classNames={classes} />
+        <NavLink label="Inquisition" component={Link} to="/MinorTrees/Inquisition" active={location.pathname === '/MinorTrees/Inquisition'} classNames={classes} />
       </NavLink>
 
       <NavLink
@@ -67,6 +69,7 @@ export default function PendorNavbar(props: PropFunc) {
       // opened={location.pathname.includes("KOTrees")}
       // disabled
       >
+        {/* TODO: MAP THIS SECTION */}
         <NavLink label="Order of the Lion" classNames={classes} />
         <NavLink label="Order of the Dragon" classNames={classes} />
         <NavLink label="Lady Valkyries Sisterhood" classNames={classes} />

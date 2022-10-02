@@ -25,19 +25,8 @@ import {
   Routes,
 } from "react-router-dom";
 import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons'
-// import TroopTreeSarleon from './MajorTrees/TroopTreeSarleon';
-// import TroopTreeRavenstern from './MajorTrees/TroopTreeRavenstern';
-// import TroopTreeFierdsvain from './MajorTrees/TroopTreeFierdsvain';
-// import TroopTreeEmpire from './MajorTrees/TroopTreeEmpire';
-// import TroopTreeDShar from './MajorTrees/TroopTreeDShar';
-// import TroopTreePendor from './MajorTrees/TroopTreePendor';
-// import Heretics from './MinorTrees/Heretics';
-// import Jatu from './MinorTrees/Jatu';
-// import MystmountainRaiders from './MinorTrees/MystmountainRaiders';
-// import SnakeCult from './MinorTrees/SnakeCult';
-// import Noldor from './MinorTrees/Noldor';
-// import Vanskerries from './MinorTrees/Vanskerries';
-// import RedBrotherhood from './MinorTrees/RedBrotherhood';
+import LoadingScreen from './LoadingScreen';
+
 const TroopTreeSarleon = lazy(() => import('./MajorTrees/TroopTreeSarleon'));
 const TroopTreeRavenstern = lazy(() => import('./MajorTrees/TroopTreeRavenstern'));
 const TroopTreeFierdsvain = lazy(() => import('./MajorTrees/TroopTreeFierdsvain'));
@@ -51,6 +40,55 @@ const SnakeCult = lazy(() => import('./MinorTrees/SnakeCult'));
 const Noldor = lazy(() => import('./MinorTrees/Noldor'));
 const Vanskerries = lazy(() => import('./MinorTrees/Vanskerries'));
 const RedBrotherhood = lazy(() => import('./MinorTrees/RedBrotherhood'));
+const ForestBandits = lazy(() => import('./MinorTrees/ForestBandits'));
+const Outlaws = lazy(() => import('./MinorTrees/Outlaws'));
+const RogueKnights = lazy(() => import('./MinorTrees/RogueKnights'));
+const AdventurerCompanies = lazy(() => import('./MinorTrees/AdventurerCompanies'));
+const Barclay = lazy(() => import('./MinorTrees/Barclay'));
+const Mettenheim = lazy(() => import('./MinorTrees/Mettenheim'));
+const Veccavia = lazy(() => import('./MinorTrees/Veccavia'));
+const Singalians = lazy(() => import('./MinorTrees/Singalians'));
+const MelitineEmpire = lazy(() => import('./MinorTrees/MelitineEmpire'));
+const Mercenaries = lazy(() => import('./MinorTrees/Mercenaries'));
+const RebelPeasants = lazy(() => import('./MinorTrees/RebelPeasants'));
+const Inquisition = lazy(() => import('./MinorTrees/Inquisition'));
+
+const linkData = [
+  { component: <TroopTreeSarleon />, path: "/MajorTrees/Sarleon" },
+  { component: <TroopTreeRavenstern />, path: "/MajorTrees/Ravenstern" },
+  { component: <TroopTreeFierdsvain />, path: "/MajorTrees/Fierdsvain" },
+  { component: <TroopTreeEmpire />, path: "/MajorTrees/Empire" },
+  { component: <TroopTreeDShar />, path: "/MajorTrees/DShar" },
+  { component: <TroopTreePendor />, path: "/MajorTrees/Pendor" },
+  { component: <Heretics />, path: "/MinorTrees/Heretics" },
+  { component: <Jatu />, path: "/MinorTrees/Jatu" },
+  { component: <MystmountainRaiders />, path: "/MinorTrees/MystmountainRaiders" },
+  { component: <SnakeCult />, path: "/MinorTrees/SnakeCult" },
+  { component: <Noldor />, path: "/MinorTrees/Noldor" },
+  { component: <Vanskerries />, path: "/MinorTrees/Vanskerries" },
+  { component: <RedBrotherhood />, path: "/MinorTrees/RedBrotherhood" },
+  { component: <ForestBandits />, path: "/MinorTrees/ForestBandits" },
+  { component: <Outlaws />, path: "/MinorTrees/Outlaws" },
+  { component: <RogueKnights />, path: "/MinorTrees/RogueKnights" },
+  { component: <AdventurerCompanies />, path: "/MinorTrees/AdventurerCompanies" },
+  { component: <Barclay />, path: "/MinorTrees/Barclay" },
+  { component: <Mettenheim />, path: "/MinorTrees/Mettenheim" },
+  { component: <Veccavia />, path: "/MinorTrees/Veccavia" },
+  { component: <Singalians />, path: "/MinorTrees/Singalians" },
+  { component: <MelitineEmpire />, path: "/MinorTrees/MelitineEmpire" },
+  { component: <Mercenaries />, path: "/MinorTrees/Mercenaries" },
+  { component: <RebelPeasants />, path: "/MinorTrees/RebelPeasants" },
+  { component: <Inquisition />, path: "/MinorTrees/Inquisition" }
+];
+
+const routeItems = linkData.map((item) => (
+  <Route path={item.path} key={item.path} element={
+    <React.Suspense fallback={<LoadingScreen />}>
+      {item.component}
+    </React.Suspense>
+  } />
+));
+
 
 export default function PendorTroopsAppShell() {
   const theme = useMantineTheme();
@@ -159,9 +197,11 @@ export default function PendorTroopsAppShell() {
                     { value: "Forest Bandits", group: "Minor Factions" },
                     { value: "Outlaws", group: "Minor Factions" },
                     { value: "Rogue Knights", group: "Minor Factions" },
+                    { value: "Adventurer Companies", group: "Minor Factions" },
                     { value: "Barclay", group: "Minor Factions" },
                     { value: "Mettenheim", group: "Minor Factions" },
                     { value: "Veccavia", group: "Minor Factions" },
+                    { value: "Singalians", group: "Minor Factions" },
                     { value: "Melitine Empire", group: "Minor Factions" },
                     { value: "Mercenaries", group: "Minor Factions" },
                     { value: "Rebel Peasants", group: "Minor Factions" },
@@ -211,79 +251,7 @@ export default function PendorTroopsAppShell() {
           <ScrollArea style={{ height: '95%' }} type="hover" offsetScrollbars scrollbarSize={8}>
             <Routes>
               <Route path="/" element={<AccordionCategories />} />
-              <Route path="/MajorTrees/Sarleon" element={
-                <React.Suspense fallback={<>...</>}>
-                  <TroopTreeSarleon />
-                </React.Suspense>
-              } />
-              <Route path="/MajorTrees/Ravenstern" element={
-                <React.Suspense fallback={<>...</>}>
-                  <TroopTreeRavenstern />
-                </React.Suspense>
-              } />
-              <Route path="/MajorTrees/Fierdsvain" element={
-                <React.Suspense fallback={<>...</>}>
-                  <TroopTreeFierdsvain />
-                </React.Suspense>
-              } />
-              <Route path="/MajorTrees/DShar" element={
-                <React.Suspense fallback={<>...</>}>
-                  <TroopTreeDShar />
-                </React.Suspense>
-              } />
-              <Route path="/MajorTrees/Pendor" element={
-                <React.Suspense fallback={<>...</>}>
-                  <TroopTreeDShar />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/Heretics" element={
-                <React.Suspense fallback={<>...</>}>
-                  <Heretics />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/Jatu" element={
-                <React.Suspense fallback={<>...</>}>
-                  <Jatu />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/MystmountainRaiders" element={
-                <React.Suspense fallback={<>...</>}>
-                  <MystmountainRaiders />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/SnakeCult" element={
-                <React.Suspense fallback={<>...</>}>
-                  <SnakeCult />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/Noldor" element={
-                <React.Suspense fallback={<>...</>}>
-                  <Noldor />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/Vanskerries" element={
-                <React.Suspense fallback={<>...</>}>
-                  <Vanskerries />
-                </React.Suspense>
-              } />
-              <Route path="/MinorTrees/RedBrotherhood" element={
-                <React.Suspense fallback={<>...</>}>
-                  <RedBrotherhood />
-                </React.Suspense>
-              } />
-              <Route path="/MajorTrees/Ravenstern" element={<TroopTreeRavenstern />} />
-              <Route path="/MajorTrees/Fierdsvain" element={<TroopTreeFierdsvain />} />
-              <Route path="/MajorTrees/Empire" element={<TroopTreeEmpire />} />
-              <Route path="/MajorTrees/DShar" element={<TroopTreeDShar />} />
-              <Route path="/MajorTrees/Pendor" element={<TroopTreePendor />} />
-
-              <Route path="/MinorTrees/Heretics" element={<Heretics />} />
-              <Route path="/MinorTrees/Jatu" element={<Jatu />} />
-              <Route path="/MinorTrees/MystmountainRaiders" element={<MystmountainRaiders />} />
-              <Route path="/MinorTrees/SnakeCult" element={<SnakeCult />} />
-              <Route path="/MinorTrees/Noldor" element={<Noldor />} />
-              <Route path="/MinorTrees/Vanskerries" element={<Vanskerries />} />
-              <Route path="/MinorTrees/RedBrotherhood" element={<RedBrotherhood />} />
+              {routeItems}
             </Routes>
           </ScrollArea>
 

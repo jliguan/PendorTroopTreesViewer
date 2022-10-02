@@ -23,23 +23,23 @@ export default function SnakeCult() {
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
 
-            <Grid.Col span={6}>
+            <Grid.Col span={4}>
                 <ActionIcon size="xl" variant="transparent" component={Link} to="/">
                     <IconArrowLeft />
                 </ActionIcon>
             </Grid.Col>
-            <Grid.Col span={12}>
+            <Grid.Col span={16}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>Snake Cult</Title>
+                        <Title order={1} align="center">Snake Cult</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={3}>Snake Cult</Title>
+                        <Title order={3} align="center">Snake Cult</Title>
                     </MediaQuery>
                 </Center>
 
             </Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={4}></Grid.Col>
 
             <Grid.Col span={24} p={0}>
                 <Divider my="sm" mb={0} mt={0} />
@@ -113,8 +113,8 @@ export default function SnakeCult() {
                             </Grid.Col>
                             <Grid.Col span={8}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('snake_cult', 'serpent_priestesses')}>
-                                        <AvatarTroop faction={'snake_cult'} name={'serpent_priestesses'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => showStats('snake_cult', 'serpent_priestess')}>
+                                        <AvatarTroop faction={'snake_cult'} name={'serpent_priestess'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>

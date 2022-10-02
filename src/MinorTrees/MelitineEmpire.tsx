@@ -23,23 +23,23 @@ export default function MelitineEmpire() {
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
 
-            <Grid.Col span={6}>
+            <Grid.Col span={4}>
                 <ActionIcon size="xl" variant="transparent" component={Link} to="/">
                     <IconArrowLeft />
                 </ActionIcon>
             </Grid.Col>
-            <Grid.Col span={12}>
+            <Grid.Col span={16}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
-                        <Title order={1}>MelitineEmpire</Title>
+                        <Title order={1} align="center">Melitine Empire</Title>
                     </MediaQuery>
                     <MediaQuery largerThan={480} styles={{ display: 'none' }}>
-                        <Title order={3}>MelitineEmpire</Title>
+                        <Title order={3} align="center">Melitine Empire</Title>
                     </MediaQuery>
                 </Center>
 
             </Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={4}></Grid.Col>
 
             <Grid.Col span={24} p={0}>
                 <Divider my="sm" mb={0} mt={0} />
@@ -50,147 +50,132 @@ export default function MelitineEmpire() {
                 <Tabs defaultValue="first">
                     <Tabs.List>
                         <Tabs.Tab value="first">Common</Tabs.Tab>
-                        <Tabs.Tab value="second">Special</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="first" pt="xs">
                         <Grid grow gutter="sm" justify="center" columns={24}>
 
+                            <Grid.Col span={24}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'free_brother')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'free_brother'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+
+                            <Grid.Col span={24} pt={0} pb={0}>
+                                <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+
+                            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+                            <Grid.Col span={12} p={0}>
+                                <Divider size={5} />
+                            </Grid.Col>
+                            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
+
+                            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                                <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                                <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'minion')}>
-                                        <AvatarTroop faction={'heretics'} name={'minion'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'infantry')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'infantry'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'seer_initiate')}>
-                                        <AvatarTroop faction={'heretics'} name={'seer_initiate'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'archer')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'archer'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
 
                             <Grid.Col span={12} pt={0} pb={0}>
                                 <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={12} pt={0} pb={0}>
                                 <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+
+
+                            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+                            <Grid.Col span={6} p={0}>
+                                <Divider size={5} />
+                            </Grid.Col>
+                            <Grid.Col span={3} pt={0} pb={0}></Grid.Col>
+                            <Grid.Col span={12} pt={0} pb={0}></Grid.Col>
+
+
+                            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                                <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={6} pt={0} pb={0} mt={-5}>
+                                <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+
+                            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                                <Center>
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                </Center>
+                            </Grid.Col>
+
+                            <Grid.Col span={6}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'lancer')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'lancer'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={6}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'imperial_guard')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'imperial_guard'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={12}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'heavy_horse_archer')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'heavy_horse_archer'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+
+                            <Grid.Col span={6} pt={0} pb={0}>
+                                <Center>
                                     <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
                                 </Center>
                             </Grid.Col>
+                            <Grid.Col span={18}></Grid.Col>
 
-                            <Grid.Col span={12}>
+                            <Grid.Col span={6}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'worshiper')}>
-                                        <AvatarTroop faction={'heretics'} name={'worshiper'}></AvatarTroop>
+                                    <UnstyledButton onClick={() => showStats('melitine_empire', 'griwbanar')}>
+                                        <AvatarTroop faction={'melitine_empire'} name={'griwbanar'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={12}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'seer_favorite')}>
-                                        <AvatarTroop faction={'heretics'} name={'seer_favorite'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
+                            <Grid.Col span={18}></Grid.Col>
 
-                            <Grid.Col span={12} pt={0} pb={0}>
-                                <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={12} pt={0} pb={0}>
-                                <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
-                                </Center>
-                            </Grid.Col>
-
-                            <Grid.Col span={12}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'magnus')}>
-                                        <AvatarTroop faction={'heretics'} name={'magnus'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={12}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'doomguide')}>
-                                        <AvatarTroop faction={'heretics'} name={'doomguide'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-
-
-                        </Grid>
-                    </Tabs.Panel>
-                    <Tabs.Panel value="second" pt="xs">
-                        <Grid grow gutter="sm" justify="center" columns={24}>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'invoker')}>
-                                        <AvatarTroop faction={'heretics'} name={'invoker'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'possessed_doomguide')}>
-                                        <AvatarTroop faction={'heretics'} name={'possessed_doomguide'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'bloodsworn_witch')}>
-                                        <AvatarTroop faction={'heretics'} name={'bloodsworn_witch'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'demonic_magnus')}>
-                                        <AvatarTroop faction={'heretics'} name={'demonic_magnus'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'fallen')}>
-                                        <AvatarTroop faction={'heretics'} name={'fallen'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'fallen_footman')}>
-                                        <AvatarTroop faction={'heretics'} name={'fallen_footman'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'fallen_warrior')}>
-                                        <AvatarTroop faction={'heretics'} name={'fallen_warrior'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'fallen_veteran')}>
-                                        <AvatarTroop faction={'heretics'} name={'fallen_veteran'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={8}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('heretics', 'fallen_revenant')}>
-                                        <AvatarTroop faction={'heretics'} name={'fallen_revenant'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
                         </Grid>
                     </Tabs.Panel>
                 </Tabs>

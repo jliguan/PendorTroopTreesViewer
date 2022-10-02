@@ -23,12 +23,12 @@ export default function MystmountainRaiders() {
     return (
         <Grid grow gutter="sm" justify="center" columns={24} >
 
-            <Grid.Col span={6}>
+            <Grid.Col span={4}>
                 <ActionIcon size="xl" variant="transparent" component={Link} to="/">
                     <IconArrowLeft />
                 </ActionIcon>
             </Grid.Col>
-            <Grid.Col span={12}>
+            <Grid.Col span={16}>
                 <Center>
                     <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
                         <Title order={1} align="center">Mystmountain Raiders</Title>
@@ -39,7 +39,7 @@ export default function MystmountainRaiders() {
                 </Center>
 
             </Grid.Col>
-            <Grid.Col span={6}></Grid.Col>
+            <Grid.Col span={4}></Grid.Col>
 
             <Grid.Col span={24} p={0}>
                 <Divider my="sm" mb={0} mt={0} />
