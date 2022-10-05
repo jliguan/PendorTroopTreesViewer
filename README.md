@@ -20,4 +20,4 @@ npm run dev
 ``` 
 
 ## Disclaimer
-I do not own any of the assets used in this project. These assests were use for learning purposes.
+I do not own any of the assets used in this project. These assets were used for learning purposes.
