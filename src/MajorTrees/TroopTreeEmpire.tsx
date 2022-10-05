@@ -52,6 +52,7 @@ export default function TroopTreeEmpire() {
                     <Tabs.List>
                         <Tabs.Tab value="first">Commoners</Tabs.Tab>
                         <Tabs.Tab value="second">Nobles</Tabs.Tab>
+                        <Tabs.Tab value="third">Special</Tabs.Tab>
                     </Tabs.List>
                     <Tabs.Panel value="first" pt="xs">
                         <Grid grow gutter="sm" justify="center" columns={24}>
@@ -360,6 +361,27 @@ export default function TroopTreeEmpire() {
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
+                        </Grid>
+
+                    </Tabs.Panel>
+                    <Tabs.Panel value="third" pt="xs">
+                        <Grid grow gutter="sm" justify="center" columns={24}>
+                            <Grid.Col span={12}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('empire', 'guardian_empire_knight')}>
+                                        <AvatarTroop faction={'empire'} name={'guardian_empire_knight'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={12}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('empire', 'iron_circle_centurion')}>
+                                        <AvatarTroop faction={'empire'} name={'iron_circle_centurion'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+
+                            
                         </Grid>
 
                     </Tabs.Panel>

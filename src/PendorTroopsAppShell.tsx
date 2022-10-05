@@ -176,8 +176,8 @@ export default function PendorTroopsAppShell() {
         header={
           <Header height={70} p="md">
 
-            <Grid style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-              <Grid.Col span={7} style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+            <Grid style={{ display: 'flex', alignItems: 'center', height: '100%' }} m={0} >
+              <Grid.Col span={12} style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
 
                 <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
                   <Burger
@@ -213,7 +213,7 @@ export default function PendorTroopsAppShell() {
 
               </Grid.Col>
 
-              <Grid.Col span={5}>
+              {/* <Grid.Col span={5}>
                 <Autocomplete
                   placeholder="Search"
                   disabled
@@ -277,7 +277,7 @@ export default function PendorTroopsAppShell() {
                 // </Anchor>
                 //   )}
                 />
-              </Grid.Col>
+              </Grid.Col> */}
             </Grid>
           </Header>
         }

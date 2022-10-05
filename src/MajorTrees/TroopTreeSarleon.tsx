@@ -49,6 +49,7 @@ export default function TroopTreeSarleon() {
                     <Tabs.List>
                         <Tabs.Tab value="first">Commoners</Tabs.Tab>
                         <Tabs.Tab value="second">Nobles</Tabs.Tab>
+                        <Tabs.Tab value="third">Special</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="first" pt="xs">
@@ -101,7 +102,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'trained_militia')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'trained_militia')}>
                                         <AvatarTroop faction={'sarleon'} name={'trained_militia'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -111,7 +112,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'skirmisher')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'skirmisher')}>
                                         <AvatarTroop faction={'sarleon'} name={'skirmisher'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -131,7 +132,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'footman')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'footman')}>
                                         <AvatarTroop faction={'sarleon'} name={'footman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -139,7 +140,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'longbowman')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'longbowman')}>
                                         <AvatarTroop faction={'sarleon'} name={'longbowman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -158,7 +159,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'armored_footman')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'armored_footman')}>
                                         <AvatarTroop faction={'sarleon'} name={'armored_footman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -166,7 +167,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'armored_longbowman')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'armored_longbowman')}>
                                         <AvatarTroop faction={'sarleon'} name={'armored_longbowman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -202,7 +203,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'man_at_arms')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'man_at_arms')}>
                                         <AvatarTroop faction={'sarleon'} name={'man_at_arms'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -210,7 +211,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'cavalry')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'cavalry')}>
                                         <AvatarTroop faction={'sarleon'} name={'cavalry'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -230,7 +231,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={6}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'halberdier')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'halberdier')}>
                                         <AvatarTroop faction={'sarleon'} name={'halberdier'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -245,7 +246,7 @@ export default function TroopTreeSarleon() {
                         <Grid grow gutter="sm" justify="center" columns={24} >
                             <Grid.Col span={24}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'nobleman')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'nobleman')}>
                                         <AvatarTroop faction={'sarleon'} name={'nobleman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -259,7 +260,7 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={24}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'squire_at_arms')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'squire_at_arms')}>
                                         <AvatarTroop faction={'sarleon'} name={'squire_at_arms'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -273,8 +274,26 @@ export default function TroopTreeSarleon() {
 
                             <Grid.Col span={24}>
                                 <Center>
-                                <UnstyledButton onClick={() => showStats('sarleon', 'knight')}>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'knight')}>
                                         <AvatarTroop faction={'sarleon'} name={'knight'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                        </Grid>
+                    </Tabs.Panel>
+                    <Tabs.Panel value="third" pt="xs">
+                        <Grid grow gutter="sm" justify="center" columns={24} >
+                            <Grid.Col span={12}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'marleons_heavy_cavalry')}>
+                                        <AvatarTroop faction={'sarleon'} name={'marleons_heavy_cavalry'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={12}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('sarleon', 'red_fletcher_longbowman')}>
+                                        <AvatarTroop faction={'sarleon'} name={'red_fletcher_longbowman'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>

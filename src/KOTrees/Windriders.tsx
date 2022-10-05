@@ -50,15 +50,15 @@ export default function Windriders() {
 
                     <Grid.Col span={12}>
                         <Center>
-                            <UnstyledButton onClick={() => showStats('dhsar_windriders', 'dshar_dustrider')}>
-                                <AvatarTroop faction={'dhsar_windriders'} name={'dshar_dustrider'}></AvatarTroop>
+                            <UnstyledButton onClick={() => showStats('dshar_windriders', 'dshar_dustrider')}>
+                                <AvatarTroop faction={'dshar_windriders'} name={'dshar_dustrider'}></AvatarTroop>
                             </UnstyledButton>
                         </Center>
                     </Grid.Col>
                     <Grid.Col span={12}>
                         <Center>
-                            <UnstyledButton onClick={() => showStats('dhsar_windriders', 'dshar_windrider')}>
-                                <AvatarTroop faction={'dhsar_windriders'} name={'dshar_windrider'}></AvatarTroop>
+                            <UnstyledButton onClick={() => showStats('dshar_windriders', 'dshar_windrider')}>
+                                <AvatarTroop faction={'dshar_windriders'} name={'dshar_windrider'}></AvatarTroop>
                             </UnstyledButton>
                         </Center>
                     </Grid.Col>

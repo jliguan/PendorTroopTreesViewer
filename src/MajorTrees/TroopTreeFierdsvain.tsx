@@ -50,6 +50,7 @@ export default function TroopTreeFierdsvain() {
                     <Tabs.List>
                         <Tabs.Tab value="first">Commoners</Tabs.Tab>
                         <Tabs.Tab value="second">Nobles</Tabs.Tab>
+                        <Tabs.Tab value="third">Special</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="first" pt="xs">
@@ -320,6 +321,19 @@ export default function TroopTreeFierdsvain() {
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
+                        </Grid>
+                    </Tabs.Panel>
+                    <Tabs.Panel value="third" pt="xs">
+                        <Grid grow gutter="sm" justify="center" columns={24}>
+                            <Grid.Col span={24}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('fierdsvain', 'valdis_huscarl')}>
+                                        <AvatarTroop faction={'fierdsvain'} name={'valdis_huscarl'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+
+                            
                         </Grid>
                     </Tabs.Panel>
                 </Tabs>

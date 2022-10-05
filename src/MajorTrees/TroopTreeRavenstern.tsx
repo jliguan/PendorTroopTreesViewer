@@ -50,6 +50,7 @@ export default function TroopTreeRavenstern() {
                     <Tabs.List>
                         <Tabs.Tab value="first">Commoners</Tabs.Tab>
                         <Tabs.Tab value="second">Nobles</Tabs.Tab>
+                        <Tabs.Tab value="third">Special</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="first" pt="xs">
@@ -335,6 +336,17 @@ export default function TroopTreeRavenstern() {
                                 <Center>
                                     <UnstyledButton onClick={() => showStats('ravenstern', 'highlander')}>
                                         <AvatarTroop faction={'ravenstern'} name={'highlander'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                        </Grid>
+                    </Tabs.Panel>
+                    <Tabs.Panel value="third" pt="xs">
+                        <Grid grow gutter="sm" justify="center" columns={24} >
+                            <Grid.Col span={24}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('ravenstern', 'iceguard_ranger')}>
+                                        <AvatarTroop faction={'ravenstern'} name={'iceguard_ranger'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>

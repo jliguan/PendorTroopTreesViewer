@@ -51,6 +51,7 @@ export default function TroopTreeDShar() {
                     <Tabs.List>
                         <Tabs.Tab value="first">Commoners</Tabs.Tab>
                         <Tabs.Tab value="second">Nobles</Tabs.Tab>
+                        <Tabs.Tab value="third">Special</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="first" pt="xs">
@@ -385,6 +386,17 @@ export default function TroopTreeDShar() {
                                 <Center>
                                     <UnstyledButton onClick={() => showStats('dshar', 'noble_cavalry')}>
                                         <AvatarTroop faction={'dshar'} name={'noble_cavalry'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                        </Grid>
+                    </Tabs.Panel>
+                    <Tabs.Panel value="third" pt="xs">
+                        <Grid grow gutter="sm" justify="center" columns={24}>
+                            <Grid.Col span={24}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('dshar', 'dshar_djaha_archer')}>
+                                        <AvatarTroop faction={'dshar'} name={'dshar_djaha_archer'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
