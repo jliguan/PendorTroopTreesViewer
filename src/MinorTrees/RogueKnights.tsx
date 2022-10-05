@@ -57,28 +57,35 @@ export default function RogueKnights() {
                     <Tabs.Panel value="first" pt="xs">
                         <Grid grow gutter="sm" justify="center" columns={24}>
 
-                            <Grid.Col span={12}>
+                            <Grid.Col span={8}>
                                 <Center>
                                     <UnstyledButton onClick={() => showStats('rogue_knights', 'empire_mortal')}>
                                         <AvatarTroop faction={'rogue_knights'} name={'empire_mortal'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={12}>
+                            <Grid.Col span={8}>
                                 <Center>
                                     <UnstyledButton onClick={() => showStats('rogue_knights', 'empire_immortal')}>
                                         <AvatarTroop faction={'rogue_knights'} name={'empire_immortal'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={12}>
+                            <Grid.Col span={8}>
+                                <Center>
+                                    <UnstyledButton onClick={() => showStats('rogue_knights', 'empire_knight')}>
+                                        <AvatarTroop faction={'rogue_knights'} name={'empire_knight'}></AvatarTroop>
+                                    </UnstyledButton>
+                                </Center>
+                            </Grid.Col>
+                            <Grid.Col span={8}>
                                 <Center>
                                     <UnstyledButton onClick={() => showStats('rogue_knights', 'marinus')}>
                                         <AvatarTroop faction={'rogue_knights'} name={'marinus'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={12}>
+                            <Grid.Col span={8}>
                                 <Center>
                                     <UnstyledButton onClick={() => showStats('rogue_knights', 'shadow_legion_centurion')}>
                                         <AvatarTroop faction={'rogue_knights'} name={'shadow_legion_centurion'}></AvatarTroop>
@@ -86,14 +93,7 @@ export default function RogueKnights() {
                                 </Center>
                             </Grid.Col>
 
-                            <Grid.Col span={12}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('rogue_knights', 'empire_knight')}>
-                                        <AvatarTroop faction={'rogue_knights'} name={'empire_knight'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={12}></Grid.Col>
+                            <Grid.Col span={8}></Grid.Col>
 
 
                         </Grid>

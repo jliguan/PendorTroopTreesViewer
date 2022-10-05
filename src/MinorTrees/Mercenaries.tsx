@@ -62,34 +62,10 @@ export default function Mercenaries() {
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={12}>
-                                <Center>
-                                    <UnstyledButton onClick={() => showStats('mercenaries', 'farmer')}>
-                                        <AvatarTroop faction={'mercenaries'} name={'farmer'}></AvatarTroop>
-                                    </UnstyledButton>
-                                </Center>
-                            </Grid.Col>
-
-                            <Grid.Col span={12} pt={0} pb={0}>
-                                <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
-                                </Center>
-                            </Grid.Col>
-                            <Grid.Col span={12} pt={0} pb={0}>
-                                <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
-                                </Center>
-                            </Grid.Col>
-
-                            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
-                            <Grid.Col span={12} p={0} mt={-5}>
-                                <Divider size={5} />
-                            </Grid.Col>
-                            <Grid.Col span={6} pt={0} pb={0}></Grid.Col>
 
                             <Grid.Col span={24} pt={0} pb={0}>
                                 <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
                                 </Center>
                             </Grid.Col>
                             

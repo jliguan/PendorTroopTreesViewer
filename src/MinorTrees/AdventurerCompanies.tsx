@@ -251,9 +251,9 @@ export default function AdventurerCompanies() {
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
-                            <Grid.Col span={12} pt={0} pb={0} mt={-5}>
+                            <Grid.Col span={12} pt={0} pb={0}>
                                 <Center>
-                                    <Divider orientation="vertical" size="xl" sx={{ height: '10px' }} />
+                                    <Divider orientation="vertical" size="xl" sx={{ height: '20px' }} />
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={12} pt={0} pb={0} mt={-5}></Grid.Col>
