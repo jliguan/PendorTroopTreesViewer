@@ -52,6 +52,25 @@ const MelitineEmpire = lazy(() => import('./MinorTrees/MelitineEmpire'));
 const Mercenaries = lazy(() => import('./MinorTrees/Mercenaries'));
 const RebelPeasants = lazy(() => import('./MinorTrees/RebelPeasants'));
 const Inquisition = lazy(() => import('./MinorTrees/Inquisition'));
+const Lion = lazy(() => import('./KOTrees/Lion'));
+const Dragon = lazy(() => import('./KOTrees/Dragon'));
+const Valkyries = lazy(() => import('./KOTrees/Valkyries'));
+const ShadowLegion = lazy(() => import('./KOTrees/ShadowLegion'));
+const Immortals = lazy(() => import('./KOTrees/Immortals'));
+const Windriders = lazy(() => import('./KOTrees/Windriders'));
+const Griffon = lazy(() => import('./KOTrees/Griffon'));
+const Falcon = lazy(() => import('./KOTrees/Falcon'));
+const Raven = lazy(() => import('./KOTrees/Raven'));
+const Radiant = lazy(() => import('./KOTrees/Radiant'));
+const Clarion = lazy(() => import('./KOTrees/Clarion'));
+const Ebony = lazy(() => import('./KOTrees/Ebony'));
+const Silvermist = lazy(() => import('./KOTrees/Silvermist'));
+const Dawn = lazy(() => import('./KOTrees/Dawn'));
+const Eventide = lazy(() => import('./KOTrees/Eventide'));
+const Phoenix = lazy(() => import('./KOTrees/Phoenix'));
+const ShadowWolves = lazy(() => import('./KOTrees/ShadowWolves'));
+const Scorpion = lazy(() => import('./KOTrees/Scorpion'));
+const Kraken = lazy(() => import('./KOTrees/Kraken'));
 
 const linkData = [
   { component: <TroopTreeSarleon />, path: "/MajorTrees/Sarleon" },
@@ -78,7 +97,26 @@ const linkData = [
   { component: <MelitineEmpire />, path: "/MinorTrees/MelitineEmpire" },
   { component: <Mercenaries />, path: "/MinorTrees/Mercenaries" },
   { component: <RebelPeasants />, path: "/MinorTrees/RebelPeasants" },
-  { component: <Inquisition />, path: "/MinorTrees/Inquisition" }
+  { component: <Inquisition />, path: "/MinorTrees/Inquisition" },
+  { component: <Lion />, path: "/KOTrees/Lion" },
+  { component: <Dragon />, path: "/KOTrees/Dragon" },
+  { component: <Valkyries />, path: "/KOTrees/Valkyries" },
+  { component: <ShadowLegion />, path: "/KOTrees/ShadowLegion" },
+  { component: <Immortals />, path: "/KOTrees/Immortals" },
+  { component: <Windriders />, path: "/KOTrees/Windriders" },
+  { component: <Griffon />, path: "/KOTrees/Griffon" },
+  { component: <Falcon />, path: "/KOTrees/Falcon" },
+  { component: <Raven />, path: "/KOTrees/Raven" },
+  { component: <Radiant />, path: "/KOTrees/Radiant" },
+  { component: <Clarion />, path: "/KOTrees/Clarion" },
+  { component: <Ebony />, path: "/KOTrees/Ebony" },
+  { component: <Silvermist />, path: "/KOTrees/Silvermist" },
+  { component: <Dawn />, path: "KOTrees/Dawn" },
+  { component: <Eventide />, path: "/KOTrees/Eventide" },
+  { component: <Phoenix />, path: "/KOTrees/Phoenix" },
+  { component: <ShadowWolves />, path: "/KOTrees/ShadowWolves" },
+  { component: <Scorpion />, path: "/KOTrees/Scorpion" },
+  { component: <Kraken />, path: "/KOTrees/Kraken" }
 ];
 
 const routeItems = linkData.map((item) => (

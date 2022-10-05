@@ -70,25 +70,25 @@ export default function PendorNavbar(props: PropFunc) {
       // disabled
       >
         {/* TODO: MAP THIS SECTION */}
-        <NavLink label="Order of the Lion" classNames={classes} />
-        <NavLink label="Order of the Dragon" classNames={classes} />
-        <NavLink label="Lady Valkyries Sisterhood" classNames={classes} />
-        <NavLink label="Order of the Shadow Legion" classNames={classes} />
-        <NavLink label="Empire Immortals" classNames={classes} />
-        <NavLink label="D'Shar Windriders" classNames={classes} />
-        <NavLink label="Order of the Griffon" classNames={classes} />
-        <NavLink label="Order of the Falcon" classNames={classes} />
-        <NavLink label="Order of the Raven Spear" classNames={classes} />
-        <NavLink label="Order of the Radiant Cross" classNames={classes} />
-        <NavLink label="Order of the Clarion Call" classNames={classes} />
-        <NavLink label="Order of the Ebony Gauntlet" classNames={classes} />
-        <NavLink label="Order of the Silvermist Rangers" classNames={classes} />
-        <NavLink label="Order of the Dawn" classNames={classes} />
-        <NavLink label="Order of Eventide" classNames={classes} />
-        <NavLink label="Order of the Phoenix" classNames={classes} />
-        <NavLink label="Order of the Shadow Wolves" classNames={classes} />
-        <NavLink label="Order of the Scorpion Assassins" classNames={classes} />
-        <NavLink label="Order of the Kraken Cultists" classNames={classes} />
+        <NavLink label="Order of the Lion" component={Link} to="/KOTrees/Lion" active={location.pathname === '/KOTrees/Lion'} classNames={classes} />
+        <NavLink label="Order of the Dragon" component={Link} to="/KOTrees/Dragon" active={location.pathname === '/KOTrees/Dragon'}  classNames={classes} />
+        <NavLink label="Lady Valkyries Sisterhood" component={Link} to="/KOTrees/Valkyries" active={location.pathname === '/KOTrees/Valkyries'}  classNames={classes} />
+        <NavLink label="Order of the Shadow Legion" component={Link} to="/KOTrees/ShadowLegion" active={location.pathname === '/KOTrees/ShadowLegion'}  classNames={classes} />
+        <NavLink label="Empire Immortals" component={Link} to="/KOTrees/Immortals" active={location.pathname === '/KOTrees/Immortals'}  classNames={classes} />
+        <NavLink label="D'Shar Windriders" component={Link} to="/KOTrees/Windriders" active={location.pathname === '/KOTrees/Windriders'}  classNames={classes} />
+        <NavLink label="Order of the Griffon" component={Link} to="/KOTrees/Griffon" active={location.pathname === '/KOTrees/Griffon'}  classNames={classes} />
+        <NavLink label="Order of the Falcon" component={Link} to="/KOTrees/Falcon" active={location.pathname === '/KOTrees/Falcon'}  classNames={classes} />
+        <NavLink label="Order of the Raven Spear" component={Link} to="/KOTrees/Raven" active={location.pathname === '/KOTrees/Raven'}  classNames={classes} />
+        <NavLink label="Order of the   Cross" component={Link} to="/KOTrees/Radiant" active={location.pathname === '/KOTrees/Radiant'}  classNames={classes} />
+        <NavLink label="Order of the Clarion Call" component={Link} to="/KOTrees/Clarion" active={location.pathname === '/KOTrees/Clarion'}  classNames={classes} />
+        <NavLink label="Order of the Ebony Gauntlet" component={Link} to="/KOTrees/Ebony" active={location.pathname === '/KOTrees/Ebony'}  classNames={classes} />
+        <NavLink label="Order of the Silvermist Rangers" component={Link} to="/KOTrees/Silvermist" active={location.pathname === '/KOTrees/Silvermist'}  classNames={classes} />
+        <NavLink label="Order of the Dawn" component={Link} to="/KOTrees/Dawn" active={location.pathname === '/KOTrees/Dawn'}  classNames={classes} />
+        <NavLink label="Order of Eventide" component={Link} to="/KOTrees/Eventide" active={location.pathname === '/KOTrees/Eventide'}  classNames={classes} />
+        <NavLink label="Order of the Phoenix" component={Link} to="/KOTrees/Phoenix" active={location.pathname === '/KOTrees/Phoenix'}  classNames={classes} />
+        <NavLink label="Order of the Shadow Wolves" component={Link} to="/KOTrees/ShadowWolves" active={location.pathname === '/KOTrees/ShadowWolves'}  classNames={classes} />
+        <NavLink label="Order of the Scorpion Assassins" component={Link} to="/KOTrees/Scorpion" active={location.pathname === '/KOTrees/Scorpion'}  classNames={classes} />
+        <NavLink label="Order of the Kraken Cultists" component={Link} to="/KOTrees/Kraken" active={location.pathname === '/KOTrees/Kraken'}  classNames={classes} />
       </NavLink>
     </ScrollArea>
   );

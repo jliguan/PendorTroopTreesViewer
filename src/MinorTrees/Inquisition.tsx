@@ -116,14 +116,14 @@ export default function Inquisition() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('inquisition', 'cleric')}>
+                                    <UnstyledButton onClick={() => showStats('inquisition', 'war_priest')}>
                                         <AvatarTroop faction={'inquisition'} name={'war_priest'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
                             </Grid.Col>
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('inquisition', 'cleric')}>
+                                    <UnstyledButton onClick={() => showStats('inquisition', 'battle_brother')}>
                                         <AvatarTroop faction={'inquisition'} name={'battle_brother'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
@@ -138,7 +138,7 @@ export default function Inquisition() {
 
                             <Grid.Col span={12}>
                                 <Center>
-                                    <UnstyledButton onClick={() => showStats('inquisition', 'cleric')}>
+                                    <UnstyledButton onClick={() => showStats('inquisition', 'inquisitor')}>
                                         <AvatarTroop faction={'inquisition'} name={'inquisitor'}></AvatarTroop>
                                     </UnstyledButton>
                                 </Center>
