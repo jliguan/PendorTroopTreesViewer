@@ -7999,7 +7999,7 @@
         "kraken_riddari": {
             "name": "Kraken Riddari",
             "level": 55,
-            "type": "Cavalry",
+            "type": "Infantry",
             "url": "kraken_riddari.png",
             "cost": 0,
             "hp": 88,

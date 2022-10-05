@@ -83,9 +83,16 @@ export default function AvatarTroop(props: TroopProps) {
                     />
                 </Skeleton>
             </MediaQuery>
-            <Text align='center' size="sm">
-                {(TroopData as any)[props.faction][props.name]["name"]}
-            </Text>
+            <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
+                <Text align='center' size="sm">
+                    {(TroopData as any)[props.faction][props.name]["name"]}
+                </Text>
+            </MediaQuery>
+            <MediaQuery largerThan={480} styles={{ display: 'none' }}>
+                <Text align='center' size="xs">
+                    {(TroopData as any)[props.faction][props.name]["name"]}
+                </Text>
+            </MediaQuery>
         </Stack >
     );
 }

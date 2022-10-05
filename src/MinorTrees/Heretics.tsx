@@ -21,7 +21,7 @@ export default function Heretics() {
     }
 
     return (
-        <Grid grow gutter="sm" justify="center" columns={24} >
+        <Grid grow gutter="sm" justify="center" columns={24} pb={100}>
 
             <Grid.Col span={4}>
                 <ActionIcon size="xl" variant="transparent" component={Link} to="/">

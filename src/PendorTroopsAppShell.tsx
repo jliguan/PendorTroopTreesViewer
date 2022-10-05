@@ -286,12 +286,23 @@ export default function PendorTroopsAppShell() {
         {/* <ScrollArea.Autosize maxHeight={'87vh'} type="never"> */}
 
         <Container px={0} mx={0} fluid sx={{ height: 'calc(100vh - var(--mantine-header-height))' }}>
-          <ScrollArea style={{ height: '95%' }} type="hover" offsetScrollbars scrollbarSize={8}>
-            <Routes>
-              <Route path="/" element={<AccordionCategories />} />
-              {routeItems}
-            </Routes>
-          </ScrollArea>
+          <MediaQuery smallerThan={480} styles={{ display: 'none' }}>
+            <ScrollArea style={{ height: '100%' }} type="hover" offsetScrollbars scrollbarSize={8}>
+              <Routes>
+                <Route path="/" element={<AccordionCategories />} />
+                {routeItems}
+              </Routes>
+            </ScrollArea>
+          </MediaQuery>
+          <MediaQuery largerThan={480} styles={{ display: 'none' }}>
+            <ScrollArea style={{ height: '100%' }} type="never" scrollbarSize={8}>
+              <Routes>
+                <Route path="/" element={<AccordionCategories />} />
+                {routeItems}
+              </Routes>
+            </ScrollArea>
+            </MediaQuery>
+
 
         </Container>
 
